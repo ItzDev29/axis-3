@@ -85,7 +85,7 @@ export default function Contact() {
             <div>
               <span>
                 <h3>Version</h3>
-                <p> © Copyright 2024. All Rights Reserved.</p>
+                <p>Copyright 2024. All Rights Reserved.</p>
               </span>
             </div>
           </div>
