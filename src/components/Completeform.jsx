@@ -49,7 +49,7 @@ const City=user && user.city
 
 
 
-const handleSubmit = async (e:any) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
   setLoading(true);
    // values object
