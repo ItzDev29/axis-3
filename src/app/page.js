@@ -12,7 +12,6 @@ import Director from '../components/Director/Director';
 import Count from '../components/Count/page';
 import Line from '../components/Line/page';
 import Speaker from '../components/Speakers/Speaker'
-import { useRouter } from 'next/navigation';
 
 export default function App(){
   const [isLoading, setIsLoading] = useState(true);

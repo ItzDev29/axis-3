@@ -1,13 +1,12 @@
 "use client";
 
-import { SignIn, SignedOut, RedirectToSignUp } from "@clerk/nextjs";
-import React, { useEffect, useState } from "react";
+import { SignIn } from "@clerk/nextjs";
+import React from "react";
 import "./global.css";
 import styled from "styled-components";
 import { dark } from "@clerk/themes";
 import { ClerkLoaded, ClerkLoading, ClerkProvider } from "@clerk/nextjs";
-import { useAuth } from "@clerk/nextjs";
-import { useUser } from "@clerk/nextjs";
+
 
 const StyledDiv = styled.div`
   z-index: 1000;

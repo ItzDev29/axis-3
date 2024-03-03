@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { MongoClient, ObjectId } from 'mongodb'
 import {headers} from "next/headers"
-import mongoose from 'mongoose';
 
 
 export async function POST(req:Request) {

@@ -3,14 +3,11 @@
 import Image from "next/image";
 import { useUser } from "@clerk/nextjs";
 import Header from "../../components/Header";
-import redirect from "next/navigation";
-import styles from "./profilepage.module.css";
-import Navbar from "../../components/Navbar";
+
 import Editpbut from "../../components/Editpbut";
 import CompleteProfile from "../../components/CompleteProfile";
 import "./global.css";
-import { NextApiRequest } from "next";
-import { auth, clerkClient } from "@clerk/nextjs/server";
+
 import React, { useState, useEffect } from "react";
 // import Router from "next/router";
 // import { useRouter } from "next/navigation";

@@ -1,10 +1,8 @@
 import { type NextRequest } from "next/server";
 import { NextResponse } from 'next/server';
-import type { NextApiRequest, NextApiResponse } from "next";
 import { getAuth ,clerkClient} from "@clerk/nextjs/server";
 import { MongoClient } from 'mongodb'
 
-import jwt, { Jwt, JwtPayload, Secret } from "jsonwebtoken";
 
 export async function GET(req: NextRequest, res: NextResponse) {
   try{
