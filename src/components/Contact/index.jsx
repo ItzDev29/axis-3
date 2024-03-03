@@ -8,13 +8,13 @@ export default function Contact() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start end", "end end"],
+    offset: ['start end', 'end end'],
   });
   const x = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
   const rotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
   return (
-    <div id="contact">
+    <div id='contact'>
       <motion.div style={{ y }} ref={container} className={styles.contact}>
         <div className={styles.body}>
           <div className={styles.title}>
@@ -22,7 +22,7 @@ export default function Contact() {
               <h2>Let's work together</h2>
             </span>
             <motion.div style={{ x }} className={styles.buttonContainer}>
-              <Rounded backgroundColor={"#334BD3"} className={styles.button}>
+              <Rounded backgroundColor={'#334BD3'} className={styles.button}>
                 <p>Get in touch</p>
               </Rounded>
             </motion.div>
@@ -36,7 +36,7 @@ export default function Contact() {
             </Rounded>
             <Rounded>
               <p>
-                {" "}
+                {' '}
                 Student Activity Centre, Near Auditorium, VNIT, Nagpur-440010
               </p>
             </Rounded>
@@ -45,13 +45,13 @@ export default function Contact() {
             <div>
               <span>
                 <h3>Follow us on </h3>
-                <a href=" https://www.instagram.com/axis_vnit?igsh=MTg0MDRjcmphZmVmZg==">
+                <a href='https://www.instagram.com/axis_vnit?igsh=MTg0MDRjcmphZmVmZg=='>
                   <Magnetic>
                     <p>Instagram</p>
                   </Magnetic>
                 </a>
               </span>
-              <a href="https://youtube.com/@AXISVNIT?si=7s08iKfbI65In2Xl">
+              <a href='https://youtube.com/@AXISVNIT?si=7s08iKfbI65In2Xl'>
                 <Magnetic>
                   <p>Youtube</p>
                 </Magnetic>
@@ -60,7 +60,7 @@ export default function Contact() {
               <Magnetic>
                 <p></p>
               </Magnetic>
-              <a href="https://www.linkedin.com/company/axis-vnit-nagpur/">
+              <a href='https://www.linkedin.com/company/axis-vnit-nagpur/'>
                 <Magnetic>
                   <p>LinkedIN</p>
                 </Magnetic>
@@ -68,7 +68,7 @@ export default function Contact() {
               <Magnetic>
                 <p></p>
               </Magnetic>
-              <a href="">
+              <a href=''>
                 <Magnetic>
                   <p>X</p>
                 </Magnetic>
@@ -76,7 +76,7 @@ export default function Contact() {
               <Magnetic>
                 <p></p>
               </Magnetic>
-              <a href="">
+              <a href=''>
                 <Magnetic>
                   <p>Facebook</p>
                 </Magnetic>
