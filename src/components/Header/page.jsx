@@ -209,7 +209,7 @@ export default function Header({ show }) {
                       </a>
                     </Magnetic>
 
-                    <Magnetic>
+                    {/* <Magnetic>
                       <a
                         className="group relative border-4 rounded-full inline-flex items-center overflow-hidden bg-white px-8 py-3 text-black focus:outline-none focus:ring active:bg-indigo-500"
                         href="/sign-up"
@@ -235,7 +235,7 @@ export default function Header({ show }) {
                           Sign-up
                         </span>
                       </a>
-                    </Magnetic>
+                    </Magnetic> */}
                   </>
                 )}
               </div>
@@ -265,33 +265,29 @@ export default function Header({ show }) {
           </div>
         </div>
         {isExpanded && (
-          <div className="md:hidden text-gray-800 bg-gray-100 p-4 rounded-lg">
-            <ul className="flex flex-col mt-2">
-              <li className="hover:text-blue-500">
-                {/* <HashLink smooth to="#abam"> */}
-                Events
-                {/* </HashLink> */}
-              </li>
-              <li className="hover:text-blue-500">
-                {/* <HashLink smooth to="#abam"> */}
-                CA Portal
-                {/* </HashLink> */}
-              </li>
-              <li className="hover:text-blue-500">
-                {/* <HashLink smooth to="#abam"> */}
-                About
-                {/* </HashLink> */}
-              </li>
-              <li className="hover:text-blue-500">
-                {/* <HashLink smooth to="#abam"> */}
-                About
-                {/* </HashLink> */}
-              </li>
-            </ul>
-          </div>
+        <div className="md:hidden text-gray-800 bg-gray-100 p-4 rounded-lg">
+        <ul className="flex flex-col mt-2 space-y-2">
+          <li>
+            <a href="/Events" className="hover:text-blue-500">Events</a>
+          </li>
+          <li>
+            <a href="https://ca.axisvnit.in/" className="hover:text-blue-500">CA Portal</a>
+          </li>
+          <li>
+            <a href="/Sponsers" className="hover:text-blue-500">Sponsors</a>
+          </li>
+          <li>
+            <a href="/Workshop" className="hover:text-blue-500">Workshops</a>
+          </li>
+          <li>
+            <a href="/Team" className="hover:text-blue-500">Our Team!</a>
+          </li>
+        </ul>
+      </div>
+      
         )}
       </div>
-      {/* </header> */}
+      
       <div ref={button} className={styles.headerButtonContainer}>
         <Rounded
           onClick={() => {

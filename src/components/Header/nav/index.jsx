@@ -10,27 +10,23 @@ import Curve from './Curve';
 const navItems = [
   {
     title: "Events",
-    href: "/",
+    href: "/Events",
   },
   {
     title: "CA Portal",
-    href: "/work",
+    href: "https://ca.axisvnit.in/",
   },
   {
-    title: "Gallery",
-    href: "/about",
+    title: "Sponsers",
+    href: "/Sponsers",
   },
   {
     title: "Workshop",
-    href: "/contact",
+    href: "/Workshop",
   },
   {
     title: "Our Team",
-    href: "/contact",
-  },
-  {
-    title: "Contact",
-    href: "/contact",
+    href: "/Team",
   },
 ]
 

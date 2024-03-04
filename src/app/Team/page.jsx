@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Header from '../../components/Header'
+import Header from '../../components/Header/page'
 import GoToTopButton from "../../components/GoToTop/Go";
 
 export default function Team() {

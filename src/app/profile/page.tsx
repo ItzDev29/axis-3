@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useUser } from "@clerk/nextjs";
-import Header from "../../components/Header";
+import Header from "../../components/Header/page";
 
 import Editpbut from "../../components/Editpbut";
 import CompleteProfile from "../../components/CompleteProfile";

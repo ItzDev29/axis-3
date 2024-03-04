@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./W.css";
 import WorkshopForm from "../RegiForms/WorkshopForm";
 import { useEffect } from "react";
-import Header from "../../components/Header";
+import Header from "../../components/Header/page";
 import GoToTopButton from "../../components/GoToTop/Go";
 
 const PostCard = ({ title, date, imageSrc, description, id }) => {
@@ -50,7 +50,7 @@ const PostCard = ({ title, date, imageSrc, description, id }) => {
                 className="absolute top-4 right-4 text-white hover:text-gray-800"
               >
                 <svg
-                  className="w-8 h-8 mr-6 mt-8 backdrop:blur-md"
+                  className="w-8 h-8 mr-6 mt-16 backdrop:blur-md"
                   fill="black"
                   stroke="white"
                   viewBox="0 0 24 24"
@@ -80,7 +80,7 @@ const PostCard = ({ title, date, imageSrc, description, id }) => {
               {title}
             </a>
             <br></br>
-            <span className="text-gray-600"> {date}</span>
+            <span className="text-gray-400"> {date}</span>
           </p>
           <p className="mb-1 text-gray-200 text-center">{description}</p>
           <div className="flex flex-row justify-between rounded-md">

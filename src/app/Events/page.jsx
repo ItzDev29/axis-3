@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 import "./D.css";
 import { useEffect } from "react";
 import Form from "../RegiForms/Form";
-import Header from '../../components/Header'
+import Header from '../../components/Header/page'
 import { useAuth } from "@clerk/nextjs";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -182,7 +182,7 @@ const Home = () => {
                 className="absolute top-4 right-4 text-white hover:text-gray-800"
               >
                 <svg
-                  className="w-8 h-8 mr-6 mt-8 backdrop:blur-md"
+                  className="w-8 h-8 mr-6 mt-14 backdrop:blur-md"
                   fill="black"
                   stroke="white"
                   viewBox="0 0 24 24"
@@ -327,14 +327,14 @@ const Home = () => {
             <img className="w-28 h-18 md:w-32 md:h-22" src="/images/axislogo.png" alt="" />
           </a>
           <div className="flex flex-wrap items-center justify-center gap-3 mt-4 lg:gap-6 lg:mt-0">
-            <a href="/" className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400">
-              Overview
+            <a href="/Events" className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400">
+              Events
             </a>
-            <a href="/" className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400">
-              Features
+            <a href="/Workshop" className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400">
+              Workshops
             </a>
-            <a href="/" className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400">
-              Pricing
+            <a href="/Team" className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400">
+              Our Teams!
             </a>
           </div>
           <p className="mt-6 text-sm text-gray-500 lg:mt-0 dark:text-gray-400">© Copyright 2024. All Rights Reserved.</p>

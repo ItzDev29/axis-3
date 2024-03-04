@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { slideUp } from "./animation";
 import { motion } from "framer-motion";
-import Header from '../Header';
+import Header from '../Header/page';
 
 export default function Home() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -38,6 +38,35 @@ export default function Home() {
     });
   }, []);
 
+  const [img, setimg] = useState("");
+  const fetchEvents = async () => {
+    try {
+      const response = await fetch('/api/getEvents', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'event-type': 1,
+          'category': "Landing"
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch events');
+      }
+
+      const data = await response.json();
+      const Img=data.events[0].img
+      setimg(Img);
+    
+      // setLoading(false); // Set loading to false after events are fetched
+    } catch (error) {
+      console.log('Error fetching events:', error);
+    }
+  }
+
+  useEffect(() => {
+    fetchEvents();
+  }, []);
   return (
     <>
       <Header show={true} />
@@ -89,15 +118,15 @@ export default function Home() {
             className="flex "
           >
             <div className="relative items-center w-full h-full">
-              <div className="absolute left-0 pl-14 text-white z-10 w-full top-9">
+              <div className="absolute left-0 text-white z-10 -top-8 w-full">
                 <br />
                 <br />
                 <br />
                 <br />
                 <img
-                  src="/images/axis24ogocenter.png"
+                  src={img}
                   alt="Image"
-                  className="w-screen h-auto md:w-full md:h-full mt-16 pr-10"
+                  className="w-screen h-auto md:w-full md:h-full mb-10"
                 />
               </div>
               <div

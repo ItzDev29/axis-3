@@ -32,10 +32,6 @@ function WorkshopForm({title,user,id}) {
     );
 };
 
-
-
-
-
   const handleSubmit =async  (e) => {
     e.preventDefault();
     const val={ name, email,number, teamName, participants, collegeName, state, city, linkedIn, address, yearOfStudying,eventname };
@@ -87,12 +83,8 @@ function WorkshopForm({title,user,id}) {
     }
   };
 
-
-
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-transparent">
-    
-     
+    <div className="flex flex-col items-center justify-center h-screen bg-transparent">
       <motion.form
         onSubmit={handleSubmit}
         initial={{ opacity: 0, y: 50 }}
@@ -161,7 +153,6 @@ function WorkshopForm({title,user,id}) {
            {loading ? 'Please Wait...' : 'Submit'}
         </motion.button>
         <LoadingToast loading={loading} />
-
       </motion.form>
     </div>
   );

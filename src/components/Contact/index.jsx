@@ -33,7 +33,7 @@ export default function Contact() {
           </div>
           <div className={styles.nav}>
             <Rounded>
-              <p>websiteaxis@axisvnit.in</p>
+              <p>admin@axisvnit.in</p>
             </Rounded>
             <Rounded>
               <p>
