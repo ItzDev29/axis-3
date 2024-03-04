@@ -11,7 +11,7 @@ export default function Team() {
     <div
       className="bg-cover bg-fixed bg-center w-full" style={{ backgroundImage: "url('/images/teambg.png')" }}
     >
-      <div className=" bg-transparent px-4 py-16 mx-auto  md:px-24 lg:px-8 lg:py-20">
+      <div className=" bg-transparent px-4 py-16 mx-auto md:px-24 lg:px-8 lg:py-20">
         <div className="mx-auto mb-10 text-center sm:text-center">
           <p className="inline-block px-3 py-px mb-4 text-sm font-semibold tracking-wider text-white uppercase rounded-full bg-teal-accent-400">
             Discover Our Team
@@ -43,7 +43,7 @@ export default function Team() {
           </div>
         </div>
         {activeTeam === "WEB" ? (
-          <div className="grid grid-cols-1 gap-8 mt-10 xl:mt-12 md:grid-cols-2 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 mt-10 xl:mt-12 md:grid-cols-2 sm:grid-cols-2 xl:grid-cols-3">
             <div class="flex flex-col items-center p-8 transform hover:scale-105 transition-transform duration-300 ease-in-out border cursor-pointer rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent">
               <img
                 class="object-cover w-40 h-40 rounded-full ring-4 ring-gray-300"
@@ -55,7 +55,7 @@ export default function Team() {
                 ANIKET WANI
               </h1>
 
-              <p class="mt-2 text-gray-800 font-semibold capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 font-semibold capitalize dark:text-gray-300 group-hover:text-gray-300">
                 Backend Developer
               </p>
 
@@ -71,8 +71,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="30"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -111,8 +111,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -176,8 +176,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -212,14 +212,14 @@ export default function Team() {
                 DEV MEHTA
               </h1>
 
-              <p class="mt-2 text-gray-800 font-semibold capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 font-semibold capitalize dark:text-gray-300 group-hover:text-gray-300">
                 FRONTEND DEVELOPER
               </p>
 
               <div class="flex gap-4 mt-3 text-center">
                 <ul>
                   <a
-                    href="mailto:pranav.deshpande@axisvnit.in "
+                    href="mailto:devmmehta2003@gmail.com"
                     rel="noreferrer"
                     target="_blank"
                     class="text-teal-700 transition hover:text-teal-700/75"
@@ -228,8 +228,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -258,7 +258,7 @@ export default function Team() {
 
                 <ul>
                   <a
-                    href="https://www.instagram.com/pranav.624/"
+                    href="https://www.instagram.com/dev_mehta._?igsh=dmJuemp4cDB1cGtr"
                     rel="noreferrer"
                     target="_blank"
                     class="text-teal-700 transition hover:text-teal-700/75"
@@ -268,8 +268,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -325,7 +325,7 @@ export default function Team() {
 
                 <ul>
                   <a
-                    href="http://www.linkedin.com/in/pranav-deshpande-486903235"
+                    href="https://www.linkedin.com/in/dev-mehta-3924bb203?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                     className=" text-teal-700 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                     aria-label="LinkedIN"
                   >
@@ -333,8 +333,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -369,7 +369,7 @@ export default function Team() {
                 GAUTAM KUMAR
               </h1>
 
-              <p class="mt-2 text-gray-800 font-semibold capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 font-semibold capitalize dark:text-gray-300 group-hover:text-gray-300">
                 WEB DESIGNER
               </p>
 
@@ -385,8 +385,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -425,8 +425,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -490,8 +490,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -526,7 +526,7 @@ export default function Team() {
                 VEDANG LOKHANDE
               </h1>
 
-              <p class="mt-2 text-gray-800 font-semibold capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 font-semibold capitalize  group-hover:text-gray-300">
                 BACKEND DEVELOPER
               </p>
 
@@ -542,8 +542,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -582,8 +582,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -647,8 +647,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -674,8 +674,8 @@ export default function Team() {
             </div>
           </div>
         ) : (
-          <div class="grid grid-cols-1 gap-10 mt-10 xl:mt-12 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-4">
-<           div class="flex flex-col items-center p-8 transform hover:scale-105 transition-transform duration-300 ease-in-out border cursor-pointer rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent">
+          <div class="grid grid-cols-1 gap-10 mt-10 xl:mt-12 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-3">
+<div class="flex flex-col items-center p-8 transform hover:scale-105 transition-transform duration-300 ease-in-out border cursor-pointer rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent">
               <img
                 class="object-cover w-40 h-40 rounded-full ring-4 ring-gray-300"
                 src="/images/anus.png"
@@ -686,7 +686,7 @@ export default function Team() {
                 ANUSHKA TUPKARY
               </h1>
 
-              <p class="mt-2 text-gray-800 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 capitalize dark:text-gray-300 group-hover:text-gray-300">
                 {" "}
                 CORE CO-ORDINATOR
               </p>
@@ -703,8 +703,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -743,8 +743,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -808,8 +808,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -844,7 +844,7 @@ export default function Team() {
                 ANIL RAJ ARORA
               </h1>
 
-              <p class="mt-2 text-gray-800 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 capitalize dark:text-gray-300 group-hover:text-gray-300">
                 CORE CO-ORDINATOR
               </p>
 
@@ -860,8 +860,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -900,8 +900,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -965,8 +965,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -1001,7 +1001,7 @@ export default function Team() {
                 PRANAV DESHPANDE
               </h1>
 
-              <p class="mt-2 text-gray-800 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 capitalize dark:text-gray-300 group-hover:text-gray-300">
                 CORE CO-ORDINATOR
               </p>
 
@@ -1017,8 +1017,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -1057,8 +1057,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -1122,8 +1122,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -1158,7 +1158,7 @@ export default function Team() {
                 Shrihari Deshpande
               </h1>
 
-              <p class="mt-2 text-gray-800 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 capitalize dark:text-gray-300 group-hover:text-gray-300">
                 CORE CO-ORDINATOR
               </p>
 
@@ -1174,8 +1174,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -1214,8 +1214,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -1279,8 +1279,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -1311,11 +1311,11 @@ export default function Team() {
                 alt=""
               />
 
-              <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+              <h1 class="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-white">
                 DURGESH SIRSAT
               </h1>
 
-              <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 capitalize dark:text-gray-300 group-hover:text-gray-300">
                 {" "}
                 CORE-CORDINATOR
               </p>
@@ -1332,8 +1332,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -1372,8 +1372,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -1437,8 +1437,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -1473,7 +1473,7 @@ export default function Team() {
                 ANKIT SINGH
               </h1>
 
-              <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 capitalize dark:text-gray-300 group-hover:text-gray-300">
                 {" "}
                 CORE-CORDINATOR
               </p>
@@ -1490,8 +1490,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -1530,8 +1530,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -1595,8 +1595,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -1627,11 +1627,11 @@ export default function Team() {
                 alt=""
               />
 
-              <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+              <h1 class="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-white">
                 MOSIN SHAIKH
               </h1>
 
-              <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 capitaliz group-hover:text-gray-300">
                 {" "}
                 CORE-CORDINATOR
               </p>
@@ -1648,8 +1648,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -1688,8 +1688,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -1753,8 +1753,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -1789,7 +1789,7 @@ export default function Team() {
                 DEVAL PATIL
               </h1>
 
-              <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 capitalize dark:text-gray-300 group-hover:text-gray-300">
                 {" "}
                 TREASURER
               </p>
@@ -1806,8 +1806,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -1846,8 +1846,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -1911,8 +1911,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -1947,7 +1947,7 @@ export default function Team() {
                 SANSKAR BHANGDIYA
               </h1>
 
-              <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 capitalize dark:text-gray-300 group-hover:text-gray-300">
                 {" "}
                 PUBLICITY INCHARGE
               </p>
@@ -1964,8 +1964,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -2004,8 +2004,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -2069,8 +2069,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -2105,7 +2105,7 @@ export default function Team() {
                 RIYA SINGHAL
               </h1>
 
-              <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 capitalize dark:text-gray-300 group-hover:text-gray-300">
                 {" "}
                 PUBLICITY INCHARGE
               </p>
@@ -2122,8 +2122,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -2162,8 +2162,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -2227,8 +2227,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -2259,11 +2259,11 @@ export default function Team() {
                 alt=""
               />
 
-              <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+              <h1 class="mt-4 text-2xl font-semibold text-white capitalize dark:text-white group-hover:text-white">
                 RUTVIK PATHAK
               </h1>
 
-              <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 capitalize dark:text-gray-300 group-hover:text-gray-300">
                 {" "}
                 PUBLICITY INCHARGE
               </p>
@@ -2280,8 +2280,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -2320,8 +2320,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -2385,8 +2385,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -2421,7 +2421,7 @@ export default function Team() {
                 LOKESH VANAPALLI
               </h1>
 
-              <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 capitalize dark:text-gray-300 group-hover:text-gray-300">
                 {" "}
                 PUBLICITY INCHARGE
               </p>
@@ -2438,8 +2438,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -2478,8 +2478,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -2543,8 +2543,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -2579,7 +2579,7 @@ export default function Team() {
                 DHANUSHA V.
               </h1>
 
-              <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 capitalize dark:text-gray-300 group-hover:text-gray-300">
                 {" "}
                 PUBLICITY INCHARGE
               </p>
@@ -2596,8 +2596,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="24"
-                      height="24"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -2636,8 +2636,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="28"
-                      height="28"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <radialGradient
@@ -2701,8 +2701,8 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
-                      height="26"
+                      width="32"
+                      height="32"
                       viewBox="0 0 48 48"
                     >
                       <path
@@ -2737,7 +2737,7 @@ export default function Team() {
                 VISHNU JAKOTIYA
               </h1>
 
-              <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              <p class="mt-2 text-gray-300 capitalize dark:text-gray-300 group-hover:text-gray-300">
                 {" "}
                 PUBLICITY INCHARGE
               </p>
@@ -2859,7 +2859,7 @@ export default function Team() {
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
-                      width="26"
+                      width="32"
                       height="26"
                       viewBox="0 0 48 48"
                     >

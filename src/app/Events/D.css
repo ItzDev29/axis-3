@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    height: 100vh; 
+    height: 50vh; 
   }
 
 
@@ -140,15 +140,15 @@
     margin-inline: auto;
   }
   .button-wrapper {
-    margin-right: 40px; /* Adjust the margin between buttons */
+    margin-right: 8px; /* Adjust the margin between buttons */
   }
-  /* .back {
+  .back {
     width: 33%;
     height: 50px;
     float: left;
-    background-color: #eeeeee;
+    background-color: transparent;
     border: 10px;
-    border-color: #ffffff;
+    border-color: transparent;
     border-style: solid;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -157,11 +157,11 @@
     padding: 0px 5px 5px 5px;
 } */
 
-/* .back:before {
+ .back:before {
     content: counter(bc) "_";
     position: absolute;
     padding: 10px;
-} */
+}
 
 @media screen and (max-width: 1260px) {
     .back {

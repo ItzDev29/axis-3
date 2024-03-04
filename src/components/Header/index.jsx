@@ -100,10 +100,10 @@ export default function Header({ show }) {
                   <li>
                     <a
                       className="text-gray-800/75 transition hover:text-black"
-                      href="/"
+                      href="/Sponsers"
                     >
                       {" "}
-                      Gallery{" "}
+                      Sponsers{" "}
                     </a>
                   </li>
                 </Magnetic>

@@ -24,7 +24,7 @@ const CustomButton = ({ onClick, buttonText, form }) => (
 
 const GoogleDocButton = ({ googleDocLink }) => (
   <a href={googleDocLink} target="_blank" rel="noopener noreferrer">
-    <button className="button-wrapper mt-2 pr-14">
+    <button className="button-wrapper mt-1.5 pr-14">
       <div className="back">
         <div className="button_base b03_skewed_slide_in rounded-md">
           <div>Event Brochure</div>
