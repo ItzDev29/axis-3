@@ -47,7 +47,7 @@ export default function Team() {
             <div class="flex flex-col items-center p-8 transform hover:scale-105 transition-transform duration-300 ease-in-out border cursor-pointer rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent">
               <img
                 class="object-cover w-40 h-40 rounded-full ring-4 ring-gray-300"
-                src="/images/ani.png"
+                src="/images/Ani.png"
                 alt=""
               />
 
