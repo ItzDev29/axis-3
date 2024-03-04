@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    height: 50vh; 
+    height: 40vh; 
   }
 
 
@@ -155,7 +155,7 @@
     -moz-box-sizing: border-box;
     counter-increment: bc;
     padding: 0px 5px 5px 5px;
-} */
+}
 
  .back:before {
     content: counter(bc) "_";

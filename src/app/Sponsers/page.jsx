@@ -1,9 +1,14 @@
 'use client'
+import Header from "@/components/Header";
 
 export default function Sponsers() {
+
     return (
-      <div className="py-14">
+      <>
+      <Header show={true}/>
+      <div className="py-10">
         <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+        <h1 className="mt-4 mb-10 text-center text-4xl">Sponsers</h1>
           <h3 className="font-semibold text-sm text-gray-600 text-center">
             TRUSTED BY TEAMS FROM AROUND THE WORLD
           </h3>
@@ -140,6 +145,7 @@ export default function Sponsers() {
           </div>
         </div>
       </div>
+      </>
     );
   };
   

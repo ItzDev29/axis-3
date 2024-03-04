@@ -201,10 +201,10 @@ const Home = () => {
           </div>
         )}
       </div>
-      <div className="text-center text-black font-medium pt-3 pb-3">
+      <div className="text-center text-black font-medium pt-2 ">
         <h1 className="mt-4 mb-3 text-4xl">Events</h1>
         <section className="bg-transparent">
-          <div className="container px-6 py-6 mx-auto relative">
+          <div className="container px-6 py-2 mx-auto relative">
             <button
               className="text-lg text-gray-600 dark:text-gray-400 focus:outline-none absolute left-0 top-1/2 transform -translate-y-1/2"
               onClick={scrollLeft}

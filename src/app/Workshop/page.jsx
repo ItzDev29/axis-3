@@ -4,7 +4,7 @@ import "./W.css";
 import WorkshopForm from "../RegiForms/WorkshopForm";
 import { useEffect } from "react";
 import Header from "../../components/Header";
-import GoToTopButton from "@/components/GoToTop/Go";
+import GoToTopButton from "../../components/GoToTop/Go";
 
 const PostCard = ({ title, date, imageSrc, description, id }) => {
   const [showForm, setShowForm] = useState(false);
