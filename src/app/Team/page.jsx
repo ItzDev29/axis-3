@@ -56,7 +56,7 @@ export default function Team() {
               </h1>
 
               <p class="mt-2 text-gray-300 font-semibold capitalize dark:text-gray-300 group-hover:text-gray-300">
-                Backend Developer
+                BACKEND DEVELOPER
               </p>
 
               <div class="flex gap-4 mt-3 text-center">
@@ -1155,7 +1155,7 @@ export default function Team() {
               />
 
               <h1 class="mt-4 text-2xl font-semibold text-white capitalize">
-                Shrihari Deshpande
+                SHRIHARI DESHPANDE
               </h1>
 
               <p class="mt-2 text-gray-300 capitalize dark:text-gray-300 group-hover:text-gray-300">
@@ -2895,24 +2895,24 @@ export default function Team() {
 
           <div class="flex flex-wrap items-center justify-center gap-3 mt-2 lg:gap-6 lg:mt-0">
             <a
-              href="/"
+              href="/Events"
               class="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
             >
-              Overview
+              Events
             </a>
 
             <a
-              href="/"
+              href="/Workshop"
               class="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
             >
-              Features
+              Workshops
             </a>
 
             <a
-              href="/"
+              href="/Team"
               class="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
             >
-              Pricing
+              Our Team!
             </a>
           </div>
 
