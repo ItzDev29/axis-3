@@ -28,7 +28,7 @@ export default async function Page() {
     let User;
   if(userId){
    try {
-        const res = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL+"/api/checkprofile", {
+        const res = await fetch("https://axis-3.vercel.app/api/checkprofile", {
           method: "GET",
           headers:{
                 "email":userId?.user.email
