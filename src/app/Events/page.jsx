@@ -7,7 +7,7 @@ export default async function Page() {
 
    let Event;
     try {
-      const response = await fetch(process.env.VERCEL_URL+'/api/getEvents', {
+      const response = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL+'/api/getEvents', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ export default async function Page() {
     let User;
   if(userId){
    try {
-        const res = await fetch(process.env.VERCEL_URL+"/api/checkprofile", {
+        const res = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL+"/api/checkprofile", {
           method: "GET",
           headers:{
                 "email":userId?.user.email
