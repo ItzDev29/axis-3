@@ -87,5 +87,5 @@ export const authOptions: NextAuthOptions = {
       return token;
     },
   },
-  secret: process.env.NEXTAUTH_SECRET
+  secret: gu3sEHKxWS7bBjJQvl0sTIEc8t/jS2YzKshfSsIQ1Xg=
 };
