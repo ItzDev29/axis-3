@@ -28,7 +28,7 @@ export default async function Page() {
     let User;
   if(userId){
    try {
-        const res = await fetch("http://localhost:3000/api/checkprofile", {
+        const res = await fetch("/api/checkprofile", {
           method: "GET",
           headers:{
                 "email":userId?.user.email
