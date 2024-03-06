@@ -2,7 +2,7 @@ export default function Theme() {
   return (
      <>
        <div className="flex justify-center items-center">
-       <h1 className="text-3xl sm:text-4xl md:text-6xl mt-3 mb-3 font-bold">AXIS'24 Theme Video</h1>
+       <h1 className="text-3xl sm:text-4xl md:text-6xl mt-3 mb-3 font-bold">AXIS-24 Theme Video</h1>
        </div>
        <div className="flex justify-center items-center mt-10">
          <div className="w-full aspect-[16/9]">
