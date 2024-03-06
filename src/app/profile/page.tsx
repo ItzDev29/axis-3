@@ -15,7 +15,7 @@ export default async function Page() {
   try {
 
 if (session) {
-        const res = await fetch(process.env.NEXTAUTH_URL+"/api/getProfile", {
+        const res = await fetch("https://axis-3.vercel.app/api/getProfile", {
           method: "GET",
           headers:{
             "email":session?.user?.email ?? "",
