@@ -7,7 +7,7 @@ export default async function Page() {
 
    let Event;
     try {
-      const response = await fetch('https://axis-3-j3hy6akca-itzdev29.vercel.app/api/getEvents', {
+      const response = await fetch('/api/getEvents', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
