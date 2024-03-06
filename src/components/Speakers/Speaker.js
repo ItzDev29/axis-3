@@ -9,6 +9,7 @@ import { EffectCoverflow, Autoplay } from "swiper/modules";
 const Speaker = () => {
   return (
     <div className="">
+        <React.Suspense fallback={<div>Loading...</div>}>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -140,7 +141,29 @@ const Speaker = () => {
             alt=""
           />
         </SwiperSlide>
+        <SwiperSlide>
+          <img
+            loading="lazy"
+            src="/images/17.png"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            loading="lazy"
+            src="/images/18.png"
+            alt=""
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            loading="lazy"
+            src="/images/19.png"
+            alt=""
+          />
+        </SwiperSlide>
       </Swiper>
+      </React.Suspense>
     </div>
   );
 };

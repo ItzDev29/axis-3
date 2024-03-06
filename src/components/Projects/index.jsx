@@ -78,7 +78,7 @@ export default function Home() {
 
   return (
   <main onMouseMove={(e) => {moveItems(e.clientX, e.clientY)}} className={styles.projects} >
-    <h1 className='mb-20 text-center font-semibold text-6xl'>Events</h1>
+    <h1 className='mb-16 text-center font-semibold text-6xl'>Events</h1>
     <div className=' pl-8'>
       {
         projects.map( (project, index) => {

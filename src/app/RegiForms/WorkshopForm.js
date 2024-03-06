@@ -4,14 +4,10 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-function WorkshopForm({title,user,id}) {
-  const firstName = user && user.firstName ? user.firstName : "";
-  const lastName = user && user.lastName ? user.lastName : "";
-  const Name = firstName + " " + lastName;
-  const [name, setName] = useState(Name);
-  const [email, setEmail] = useState(user ? user.email : "");
+function WorkshopForm({title,user,id,email}) {
+  const [name, setName] = useState(user ? user.Name : "");
+
   const [number, setNumber] = useState(user ? user.phone : "");
-  const [participants, setParticipants] = useState([]);
   const [collegeName, setCollegeName] = useState('');
   const [state, setState] = useState(user ? user.state : "");
   const [city, setCity] = useState(user ? user.city : "");
@@ -32,11 +28,62 @@ function WorkshopForm({title,user,id}) {
     );
 };
 
+
+const validateForm = () => {
+  if (!name || !number  || !state || !city || !address || !yearOfStudying) {
+    toast.error("Please fill out all required fields.");
+    return false;
+  }
+  return true;
+};
+
+
+
+
+
+const eventname=title;
   const handleSubmit =async  (e) => {
     e.preventDefault();
-    const val={ name, email,number, teamName, participants, collegeName, state, city, linkedIn, address, yearOfStudying,eventname };
+    if (!validateForm()) {
+      setLoading(false)
+      return;
+    }
+
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(number)) {
+      toast.error("Phone number must be 10 digits.");
+      setLoading(false)
+      return;
+    }
+    const val={ name, email,number, collegeName, state, city, linkedIn, address, yearOfStudying ,eventname};
+    const evename=""
     const subject="AXIS VNIT";
-    const text="Congratulations"
+    const text =
+    `<p>Dear ${name},</p>
+    <p>We are thrilled to inform you that your registration for the ${eventname} at AXIS&rsquo;24 has been successfully confirmed! Congratulations on being selected to be a part of AXIS&rsquo;24, one of the most prestigious events of the year.</p>
+    <p><br></p>
+    
+    <div style="text-align: center; position: relative;">
+      <div style="display: inline-block; position: relative;">
+        <img src="https://i.ibb.co/cv5gJ0k/AXIS-24.png" alt="Image" border="0" style="z-index: 1;">
+      </div>
+    </div>
+    
+    <table cellpadding="0" cellspacing="0" width="100%" style="text-align: start;color: rgb(34, 34, 34);background-color: rgb(255, 255, 255);font-size: 12.8px;border-collapse: collapse;">
+        <tr>
+            <td style="color: rgb(255, 255, 255) rgb(0, 178, 219) rgb(255, 255, 255) rgb(255, 255, 255);">
+                <p style="text-align: center;"><br></p>
+                <p style="text-align: center;"><img src="https://lh3.googleusercontent.com/BmozRKQLdstr9ZQVdpiEpRDUfjDIlBNvGWNo1PAeNKnnzFZFaPci-tX9qNkzGJY1zxpjr0aNYp0gdSUaYQvx0-Fj9I78QHBGdS9kwOIt0Aheap3OETFgNxfRhMR02sq4cnr0pEyW" width="117" height="111" style="color: rgb(0, 0, 0); font-size: 14.6667px; border: medium;"><br></p>
+            </td>
+            <td style="color: rgb(255, 255, 255) rgb(255, 255, 255) rgb(255, 255, 255) rgb(0, 178, 219);">
+                <p><span style="font-size: 16px;">Team AXIS</span></p>
+                <p><span style="font-size: 16px;">AXIS&apos;24</span><a data-fr-linked="true" href="mailto:campus.connect@axisvnit.in"></a></p>
+                <p><a data-fr-linked="true" href="mailto:campus.connect@axisvnit.in">admin@axisvnit.in</a></p>
+                <p><span style="color: rgb(17, 85, 204);font-size: 11pt;"><a href="https://www.axisvnit.org/" target="_blank" style="color: rgb(17, 85, 204);"><img src="https://lh4.googleusercontent.com/PyvW0EK8X6itzJPt5WHVp-y0LKC4NT76P9wRHFAxRNJ6JOT_IruaOAw67zwjMrORGv-sLjf-R2g90FCH3u"></a></span></p>
+            </td>
+        </tr>
+    </table>
+    `;
     const maildata={subject,email,text};
     try {   
       setLoading(true);
@@ -61,9 +108,11 @@ function WorkshopForm({title,user,id}) {
           else if(res.status===401){
             toast.error("Please sign-in first");
           }
-         else {
-              toast.error('Registration failed.');
-            }
+          else if (res.status === 402) {
+            toast.error("Please Complete your profile!.");
+          } else{
+            toast.error("Registration Failed.");
+          }
            
     } catch (error) {
           console.log("Error during registration: ", error);
@@ -75,13 +124,7 @@ function WorkshopForm({title,user,id}) {
 
   };
 
-  const handleAddParticipant = () => {
-    if (participants.length < participantcount) {
-      setParticipants([...participants, '']);
-    } else {
-      alert('You can add a maximum of 3 participants.');
-    }
-  };
+
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-transparent">
@@ -101,46 +144,39 @@ function WorkshopForm({title,user,id}) {
           Registration Form
         </motion.h2>
 
-        <ToastContainer />
+     
         <div className="mb-4">
           <label htmlFor="name" className="block text-white"> Name:</label>
-          <input type="text" id="name" required placeholder={name} value={name} onChange={(e) => setName(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
+          <input type="text" id="name" readOnly placeholder={name} value={name} onChange={(e) => setName(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
         </div>
         <div className="mb-4">
           <label htmlFor="email" className="block text-white">Email:</label>
-          <input type="email" id="email"  required placeholder={email} value={email} onChange={(e) => setEmail(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
+          <input type="email" readOnly id="email"  required placeholder={email} value={email} onChange={(e) => setEmail(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
         </div>
         <div className="mb-4">
           <label htmlFor="number" className="block text-white">Phone Number:</label>
-          <input type="number" id="number"  required placeholder={number} value={number} onChange={(e) => setNumber(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
+          <input type="number" id="number"  readOnly placeholder={number} value={number} onChange={(e) => setNumber(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
         </div>
-        {/* <div className="mb-4">
-          <label htmlFor="teamName" className="block text-white">Team Name:</label>
-          <input type="text" id="teamName" value={teamName} onChange={(e) => setTeamName(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
-        </div> */}
         <div className="mb-4">
           <label htmlFor="collegeName" className="block text-white">College Name:</label>
-          <input type="text" id="collegeName" required value={collegeName} onChange={(e) => setCollegeName(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
+          <input type="text" id="collegeName" readOnly value={city} onChange={(e) => setCity(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
         </div>
         <div className="mb-4">
           <label htmlFor="state" className="block text-white">State:</label>
-          <input type="text" id="state"  required placeholder={state} value={state} onChange={(e) => setState(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
+          <input type="text" id="state"  readOnly placeholder={state} value={state} onChange={(e) => setState(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
         </div>
-        <div className="mb-4">
-          <label htmlFor="city" className="block text-white">City:</label>
-          <input type="text" id="city" required placeholder={city} value={city} onChange={(e) => setCity(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
-        </div>
+      
         <div className="mb-4">
           <label htmlFor="linkedIn" className="block text-white">LinkedIn (Optional):</label>
           <input type="text" id="linkedIn" value={linkedIn} onChange={(e) => setLinkedIn(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
         </div>
         <div className="mb-4">
           <label htmlFor="address" className="block text-white">Address:</label>
-          <input type="text" id="address" required placeholder={address} value={address} onChange={(e) => setAddress(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
+          <input type="text" id="address" readOnly placeholder={address} value={address} onChange={(e) => setAddress(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
         </div>
         <div className="mb-4">
           <label htmlFor="yearOfStudying" className="block text-white">Year of Studying:</label>
-          <input type="text" id="yearOfStudying" required placeholder={yearOfStudying} value={yearOfStudying} onChange={(e) => setYearOfStudying(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
+          <input type="text" id="yearOfStudying" readOnly placeholder={yearOfStudying ?? "First Year"} value={yearOfStudying} onChange={(e) => setYearOfStudying(e.target.value)} className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
         </div>
         
         <motion.button

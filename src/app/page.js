@@ -11,29 +11,30 @@ import GoToTopButton from '../components/GoToTop/Go';
 import Director from '../components/Director/Director';
 import Count from '../components/Count/page';
 import Line from '../components/Line/page';
-import Speaker from '../components/Speakers/Speaker'
+import Speaker from '../components/Speakers/Speaker';
+import Theme from '../components/Themevideo/page';
+import { signOut, useSession } from "next-auth/react";
 
 export default function App(){
   const [isLoading, setIsLoading] = useState(true);
-
+ const { data: session, status } = useSession();
+  const userId = session?.user;
   useEffect( () => {
     (
       async () => {
           const LocomotiveScroll = (await import('locomotive-scroll')).default
           const locomotiveScroll = new LocomotiveScroll();
-
+if(status != "loading"){
           setTimeout( () => {
             setIsLoading(false);
             document.body.style.cursor = 'default'
             window.scrollTo(0,0);
           }, 3000)
+        }
       }
     )()
-  }, [])
+  }, [status])
 
-  // const router = useRouter();
-  // router.replace(router.asPath);
-  
   return (
     <main className={styles.main} >
       <AnimatePresence mode='wait'>
@@ -43,7 +44,7 @@ export default function App(){
       <Count/>
       <Director/>
       <Line/>
-      {/* <Description /> */}
+      <Theme/>
       <Projects />
       <Speaker/>
       <SlidingImages />

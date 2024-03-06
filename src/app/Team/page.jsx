@@ -527,7 +527,7 @@ export default function Team() {
               </h1>
 
               <p class="mt-2 text-gray-300 font-semibold capitalize  group-hover:text-gray-300">
-                BACKEND DEVELOPER
+               CLOUD DEPLOYMENT 
               </p>
 
               <div class="flex gap-4 mt-3 text-center">
@@ -2726,7 +2726,7 @@ export default function Team() {
                 </ul>
               </div>
             </div>
-            <div class="flex flex-col items-center p-8 transform hover:scale-105 transition-transform duration-300 ease-in-out border cursor-pointer rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent">
+            {/* <div class="flex flex-col items-center p-8 transform hover:scale-105 transition-transform duration-300 ease-in-out border cursor-pointer rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent">
               <img
                 class="object-cover w-40 h-40 rounded-full ring-4 ring-gray-300"
                 src=""
@@ -2883,7 +2883,7 @@ export default function Team() {
                   </a>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         )}
       </div>

@@ -5,26 +5,25 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence } from "framer-motion";
 import Nav from "./nav";
 import gsap from "gsap";
-import { useAuth } from "@clerk/nextjs";
-import { useUser } from "@clerk/nextjs";
+
 import Link from "next/link";
-import { useClerk } from "@clerk/clerk-react";
 import { useRouter } from "next/navigation";
 import { redirect } from "next/navigation";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Rounded from "../../common/RoundedButton";
 import Magnetic from "../../common/Magnetic";
+import { signOut, useSession } from "next-auth/react";
 
 export default function Header({ show }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const { signOut } = useClerk();
+  const { status } = useSession();
+
   const router = useRouter();
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
   const button = useRef(null);
-  const user = useUser();
-  const { isLoaded, userId, sessionId, getToken } = useAuth();
-
+  const { data: session } = useSession();
+  const userId = session?.user;
   useEffect(() => {
     if (isActive) setIsActive(false);
   }, [pathname]);
@@ -140,7 +139,14 @@ export default function Header({ show }) {
                 {userId ? (
                   !show ? (
                     <>
-                      <button onClick={() => signOut(() => router.push("/"))}>
+                      <button
+                        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent ml-2 rounded-full"
+                        onClick={() =>
+                          status !== "loading"
+                            ? setTimeout(signOut({ callbackUrl: "/" }), 2000)
+                            : null
+                        }
+                      >
                         Sign out
                       </button>
                     </>
@@ -173,8 +179,14 @@ export default function Header({ show }) {
                           </span>
                         </a>
                       </Magnetic>
-
-                      <button onClick={() => signOut(() => router.push("/"))}>
+                      <button
+                        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent ml-2 rounded-full"
+                        onClick={() =>
+                          status !== "loading"
+                            ? setTimeout(signOut({ callbackUrl: "/" }), 2000)
+                            : null
+                        }
+                      >
                         Sign out
                       </button>
                     </>
@@ -208,34 +220,6 @@ export default function Header({ show }) {
                         </span>
                       </a>
                     </Magnetic>
-
-                    {/* <Magnetic>
-                      <a
-                        className="group relative border-4 rounded-full inline-flex items-center overflow-hidden bg-white px-8 py-3 text-black focus:outline-none focus:ring active:bg-indigo-500"
-                        href="/sign-up"
-                      >
-                        <span className="absolute -end-full transition-all group-hover:end-4">
-                          <svg
-                            className="h-5 w-5 rtl:rotate-180"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M17 8l4 4m0 0l-4 4m4-4H3"
-                            />
-                          </svg>
-                        </span>
-
-                        <span className="text-sm font-semibold transition-all group-hover:me-4">
-                          Sign-up
-                        </span>
-                      </a>
-                    </Magnetic> */}
                   </>
                 )}
               </div>
@@ -265,29 +249,136 @@ export default function Header({ show }) {
           </div>
         </div>
         {isExpanded && (
-        <div className="md:hidden text-gray-800 bg-gray-100 p-4 rounded-lg">
-        <ul className="flex flex-col mt-2 space-y-2">
-          <li>
-            <a href="/Events" className="hover:text-blue-500">Events</a>
-          </li>
-          <li>
-            <a href="https://ca.axisvnit.in/" className="hover:text-blue-500">CA Portal</a>
-          </li>
-          <li>
-            <a href="/Sponsers" className="hover:text-blue-500">Sponsors</a>
-          </li>
-          <li>
-            <a href="/Workshop" className="hover:text-blue-500">Workshops</a>
-          </li>
-          <li>
-            <a href="/Team" className="hover:text-blue-500">Our Team!</a>
-          </li>
-        </ul>
-      </div>
-      
+          <div className="md:hidden text-gray-800 bg-gray-100 p-1 rounded-lg">
+            <ul className="flex flex-col mt-2 space-y-2">
+              <li>
+                <a href="/" className="hover:text-blue-500">
+                 Home
+                </a>
+              </li>
+              <li>
+                <a href="/Events" className="hover:text-blue-500">
+                  Events
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://ca.axisvnit.in/"
+                  className="hover:text-blue-500"
+                >
+                  CA Portal
+                </a>
+              </li>
+              <li>
+                <a href="/Sponsers" className="hover:text-blue-500">
+                  Sponsors
+                </a>
+              </li>
+              <li>
+                <a href="/Workshop" className="hover:text-blue-500">
+                  Workshops
+                </a>
+              </li>
+              <li>
+                <a href="/Team" className="hover:text-blue-500">
+                  Our Team!
+                </a>
+              </li>
+            </ul>
+            {userId ? (
+              !show ? (
+                <>
+                  <button
+                    onClick={() =>
+                      status !== "loading"
+                        ? setTimeout(signOut({ callbackUrl: "/" }), 2000)
+                        : null
+                    }
+                    className="w-full px-5 mt-2 border-4 rounded-full py-3 transition-colors duration-300 bg-gray-200 dark:bg-gray-800 md:w-auto md:mx-6 hover:bg-blue-400 dark:hover:bg-gray-700"
+                  >
+                    <div className="flex gap-10 items-center justify-center -mx-2">
+                      <p className="mx-1 text-lg font-medium text-black dark:text-white">
+                        Sign Out
+                      </p>
+                    </div>
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Magnetic>
+                    <a
+                      className="group relative border-4 mt-2 rounded-full inline-flex items-center overflow-hidden bg-white px-8 py-2 text-black focus:outline-none focus:ring active:bg-indigo-500"
+                      href="/profile"
+                    >
+                      <span className="absolute -end-full transition-all group-hover:end-4">
+                        <svg
+                          className="h-5 w-5 rtl:rotate-180"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                          />
+                        </svg>
+                      </span>
+
+                      <span className="text-sm font-semibold transition-all group-hover:me-4">
+                        Dashboard
+                      </span>
+                    </a>
+                  </Magnetic>
+                  <button
+                    className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent ml-2 rounded-full"
+                    onClick={() =>
+                      status !== "loading"
+                        ? setTimeout(signOut({ callbackUrl: "/" }), 2000)
+                        : null
+                    }
+                  >
+                    Sign out
+                  </button>
+                </>
+              )
+            ) : (
+              <>
+                <Magnetic>
+                  <a
+                    className="group relative border-4 rounded-full inline-flex items-center overflow-hidden bg-white  mt-2 mr-2 px-8 py-3 text-black focus:outline-none focus:ring active:bg-indigo-500"
+                    href="/sign-in"
+                  >
+                    <span className="absolute -end-full transition-all group-hover:end-4">
+                      <svg
+                        className="h-5 w-5 rtl:rotate-180"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </span>
+
+                    <span className="text-sm font-semibold transition-all group-hover:me-4">
+                      Login
+                    </span>
+                  </a>
+                </Magnetic>
+              </>
+            )}
+          </div>
         )}
       </div>
-      
+
       <div ref={button} className={styles.headerButtonContainer}>
         <Rounded
           onClick={() => {

@@ -4,18 +4,16 @@ import { MongoClient } from 'mongodb'
 
 export async function POST(req:Request) {
   try {
-    const { firstName, lastName, number, email, address, state,city, yearOfStudy}= await req.json();
-   console.log(yearOfStudy)
+    const { Name, number, email, address, state,city, yearOfStudy}= await req.json();
+
    const client=new MongoClient(process.env.MONGODB_URI ?? '');
    await client.connect();
    const db=client.db("users");
    const userIds=[];
    const filter = { email };
-   console.log(email);
    const updateDoc = {
     $set: {
-      firstName: firstName,
-      lastName: lastName,
+      Name:Name,
       phone: number,
       address: address,
       state:state,

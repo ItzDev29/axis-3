@@ -63,7 +63,8 @@ export default function SlidingImages() {
                                     <Image 
                                     fill={true}
                                     alt={"image"}
-                                    src={`/images/${project.src}`}/>
+                                    src={`/images/${project.src}`}
+                                    sizes="(max-width: 600px) 100vw, 50vw" />
                                 </div>
                             </div>
                         })

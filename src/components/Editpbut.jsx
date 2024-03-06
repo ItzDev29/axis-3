@@ -4,17 +4,10 @@ import React from 'react';
 import "./D.css"
 import EditProfiles from './Editform';
 
-// import React from 'react'
-
-
-
-
-
-
 
 const Editpbut = (props) => {
   const CustomButton = ({ onClick, buttonText, form }) => (
-    <button    style={{ display: 'inline-block', padding: 0, width: 'auto' }} onClick={() => onClick(form)} className="button-wrapper">
+    <button style={{ display: 'inline-block', padding: 0, width: 'auto' }} onClick={() => onClick(form)} className="button-wrapper">
       <div className="back">
         <div className="button_base b03_skewed_slide_in rounded-md">
           <div>{buttonText}</div>
@@ -43,8 +36,6 @@ const closeForm = () => {
 const renderForm = () => {
  return  selectedForm;
 };
-
-
 
     return (
       <>

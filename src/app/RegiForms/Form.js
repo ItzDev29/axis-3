@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function Form({ eventname, participantcount, category, id, user }) {
-  const firstName = user && user.firstName ? user.firstName : "";
-  const lastName = user && user.lastName ? user.lastName : "";
-  const Name = firstName + " " + lastName;
-  const [name, setName] = useState(Name);
-  const [email, setEmail] = useState(user ? user.email : "");
+function Form({ eventname, participantcount, category, id, user,email }) {
+  const [name, setName] = useState(user ? user.Name : "");
+
   const [number, setNumber] = useState(user ? user.phone : "");
   const [teamName, setTeamName] = useState("");
   const [participants, setParticipants] = useState([]);
-  const [collegeName, setCollegeName] = useState("");
   const [state, setState] = useState(user ? user.state : "");
   const [city, setCity] = useState(user ? user.city : "");
   const [linkedIn, setLinkedIn] = useState("");
@@ -32,15 +28,34 @@ function Form({ eventname, participantcount, category, id, user }) {
     );
   };
 
+  const validateForm = () => {
+    if (!name || !number  || !state || !city || !address || !yearOfStudying) {
+      toast.error("Please fill out all required fields.");
+      return false;
+    }
+    return true;
+  };
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) {
+      setLoading(false)
+      return;
+    }
+
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(number)) {
+      toast.error("Phone number must be 10 digits.");
+      setLoading(false)
+      return;
+    }
     const val = {
       name,
       email,
       number,
       teamName,
       participants,
-      collegeName,
       state,
       city,
       linkedIn,
@@ -50,7 +65,30 @@ function Form({ eventname, participantcount, category, id, user }) {
     };
     const subject = "AXIS VNIT";
     const text =
-      "<h1>Hello!</h1><p>This is a test email with HTML content.</p>";
+      `<p>Dear ${name},</p>
+      <p>We are thrilled to inform you that your registration for the ${eventname} at AXIS&rsquo;24 has been successfully confirmed! Congratulations on being selected to be a part of AXIS&rsquo;24, one of the most prestigious events of the year.</p>
+      <p><br></p>
+      
+      <div style="text-align: center; position: relative;">
+        <div style="display: inline-block; position: relative;">
+          <img src="https://i.ibb.co/cv5gJ0k/AXIS-24.png" alt="Image" border="0" style="z-index: 1;">
+        </div>
+      </div>
+      
+      <table cellpadding="0" cellspacing="0" width="100%" style="text-align: start;color: rgb(34, 34, 34);background-color: rgb(255, 255, 255);font-size: 12.8px;border-collapse: collapse;">
+          <tr>
+              <td style="color: rgb(255, 255, 255) rgb(0, 178, 219) rgb(255, 255, 255) rgb(255, 255, 255);">
+                  <p style="text-align: center;"><br></p>
+                  <p style="text-align: center;"><img src="https://lh3.googleusercontent.com/BmozRKQLdstr9ZQVdpiEpRDUfjDIlBNvGWNo1PAeNKnnzFZFaPci-tX9qNkzGJY1zxpjr0aNYp0gdSUaYQvx0-Fj9I78QHBGdS9kwOIt0Aheap3OETFgNxfRhMR02sq4cnr0pEyW" width="117" height="111" style="color: rgb(0, 0, 0); font-size: 14.6667px; border: medium;"><br></p>
+              </td>
+              <td style="color: rgb(255, 255, 255) rgb(255, 255, 255) rgb(255, 255, 255) rgb(0, 178, 219);">
+                  <p><span style="font-size: 16px;">Team AXIS</span></p>
+                  <p><span style="font-size: 16px;">AXIS&apos;24</span><a data-fr-linked="true" href="mailto:campus.connect@axisvnit.in"></a></p>
+                  <p><a data-fr-linked="true" href="mailto:campus.connect@axisvnit.in">admin@axisvnit.in</a></p>
+                  <p><span style="color: rgb(17, 85, 204);font-size: 11pt;"><a href="https://www.axisvnit.org/" target="_blank" style="color: rgb(17, 85, 204);"><img src="https://lh4.googleusercontent.com/PyvW0EK8X6itzJPt5WHVp-y0LKC4NT76P9wRHFAxRNJ6JOT_IruaOAw67zwjMrORGv-sLjf-R2g90FCH3u"></a></span></p>
+              </td>
+          </tr>
+      </table>`;
     const maildata = { subject, email, text };
     try {
       setLoading(true);
@@ -73,8 +111,10 @@ function Form({ eventname, participantcount, category, id, user }) {
         toast.error("User already Registered.");
       } else if (res.status === 401) {
         toast.error("Please sign-up first");
-      } else {
-        toast.error("Registration failed.");
+      } else if (res.status === 402) {
+        toast.error("Please Complete your profile!.");
+      } else{
+        toast.error("Registration Failed.");
       }
     } catch (error) {
       console.log("Error during registration: ", error);
@@ -88,7 +128,7 @@ function Form({ eventname, participantcount, category, id, user }) {
     if (participants.length < participantcount) {
       setParticipants([...participants, ""]);
     } else {
-      alert(`You can add a maximum of ${participantCount} participants.`);
+      alert(`You can add a maximum of ${participantcount} participants.`);
     }
   };
 
@@ -122,7 +162,7 @@ function Form({ eventname, participantcount, category, id, user }) {
           Registration Form
         </motion.h2>
 
-        <ToastContainer />
+  
         {participantcount != 0 ? (
           <div className="mb-4">
             <label htmlFor="name" className="block text-white">
@@ -131,8 +171,8 @@ function Form({ eventname, participantcount, category, id, user }) {
             <input
               type="text"
               id="name"
-              required
-              placeholder={Name}
+              readOnly
+              placeholder={name}
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
@@ -147,8 +187,8 @@ function Form({ eventname, participantcount, category, id, user }) {
             <input
               type="text"
               id="name"
-              required
-              placeholder={Name}
+              readOnly
+              placeholder={name}
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
@@ -160,12 +200,11 @@ function Form({ eventname, participantcount, category, id, user }) {
             Email:
           </label>
           <input
+          readOnly
             type="email"
             id="email"
-            required
             placeholder={email}
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
             className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
           />
         </div>
@@ -176,7 +215,7 @@ function Form({ eventname, participantcount, category, id, user }) {
           <input
             type="number"
             id="number"
-            required
+            readOnly
             placeholder={number}
             value={number}
             onChange={(e) => setNumber(e.target.value)}
@@ -191,7 +230,7 @@ function Form({ eventname, participantcount, category, id, user }) {
             <input
               type="text"
               id="teamName"
-              required
+              readOnly
               value={teamName}
               onChange={(e) => setTeamName(e.target.value)}
               className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
@@ -205,9 +244,9 @@ function Form({ eventname, participantcount, category, id, user }) {
           <input
             type="text"
             id="collegeName"
-            required
-            value={collegeName}
-            onChange={(e) => setCollegeName(e.target.value)}
+            readOnly
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
             className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
           />
         </div>
@@ -218,26 +257,14 @@ function Form({ eventname, participantcount, category, id, user }) {
           <input
             type="text"
             id="state"
-            requiredplaceholder={state}
+            readOnly
+            placeholder={state}
             value={state}
             onChange={(e) => setState(e.target.value)}
             className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
           />
         </div>
-        <div className="mb-4">
-          <label htmlFor="city" className="block text-white">
-            City:
-          </label>
-          <input
-            type="text"
-            id="city"
-            required
-            placeholder={city}
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-            className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-          />
-        </div>
+       
         <div className="mb-4">
           <label htmlFor="linkedIn" className="block text-white">
             LinkedIn (Optional):
@@ -257,7 +284,7 @@ function Form({ eventname, participantcount, category, id, user }) {
           <input
             type="text"
             id="address"
-            required
+            readOnly
             placeholder={address}
             value={address}
             onChange={(e) => setAddress(e.target.value)}
@@ -271,7 +298,7 @@ function Form({ eventname, participantcount, category, id, user }) {
           <input
             type="text"
             id="yearOfStudying"
-            required
+            readOnly
             placeholder={yearOfStudying}
             value={yearOfStudying}
             onChange={(e) => setYearOfStudying(e.target.value)}
@@ -295,7 +322,7 @@ function Form({ eventname, participantcount, category, id, user }) {
                   htmlFor={`participant-${index}`}
                   className="block text-white"
                 >
-                  Participant {index + 1}:
+                  Participant {index + 1} E-Mail ID:
                 </label>
                 <div className="flex items-center">
                   <input

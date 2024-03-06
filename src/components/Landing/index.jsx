@@ -45,8 +45,8 @@ export default function Home() {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'event-type': 1,
-          'category': "Landing"
+          'event-type': 3,
+         
         },
       });
 
@@ -55,7 +55,7 @@ export default function Home() {
       }
 
       const data = await response.json();
-      const Img=data.events[0].img
+      const Img=data.events[0].mob
       setimg(Img);
     
       // setLoading(false); // Set loading to false after events are fetched

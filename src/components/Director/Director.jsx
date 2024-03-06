@@ -6,7 +6,7 @@ import { slideUp } from "./Di";
 
 export default function Home() {
   const phrase =
-    "I am elated to witness the diverse participation from universities and schools nationwide in AXIS from last 24 years.Year after year, AXIS continues to bridge the gap between technology and tech enthusiasts, exploring new horizons and democratizing technology access. The competitions held during AXIS showcased some of India's brightest minds, competing and surmounting challenges for the betterment of society.I sincerely hope that AXIS continues its upward trajectory, achieving new milestones with each passing year and bringing honor to VNIT. My best wishes go out to the AXIS 24 team and the Professors-in-charge.";
+    "I am elated to witness the diverse participation from universities and schools nationwide in AXIS from last 24 years.Year after year, AXIS continues to bridge the gap between technology and tech enthusiasts. The competitions held during AXIS showcased some of India's brightest minds, competing and surmounting challenges for the betterment of society.I sincerely hope that AXIS continues its upward trajectory, achieving new milestones with each passing year and bringing honor to VNIT. My best wishes go out to AXIS.";
     
   const director = "Director's Desk";
   const description = useRef(null);

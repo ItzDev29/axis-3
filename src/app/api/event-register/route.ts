@@ -28,10 +28,21 @@ export async function POST(req:Request) {
    const db=client.db("events");
    const objectId = new ObjectId(eventId?? '');
     const userdb=client.db("users");
-
+    const isDataComplete = (obj: any) => {
+      for (const key in obj) {
+        if (obj.hasOwnProperty(key) && !obj[key] && obj[key] !== 0) {
+          return false;
+        }
+      }
+      return true;
+    }
     const user= await userdb.collection("users").findOne({ email:email });
+    console.log(user)
    if(!user){
     return NextResponse.json({message:"First sign-in"},{status:401});
+   }
+   else if(!isDataComplete(user)){
+    return NextResponse.json({message:"Complete Profile first"},{status:402})
    }
    const event = await db.collection("events").findOne({ _id: objectId });
     if (event && event.userIds.some((user:User) => user.email === email)) {

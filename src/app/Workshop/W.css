@@ -48,6 +48,12 @@ body {
     margin-right: 10px; /* Adjust the margin between buttons */
   }
 
+  @media (min-width: 1440px) {
+    .button-wrapper {
+       margin-left: 80px;
+    }
+   }
+
 
 .back {
       width: calc(50% - 5px); 

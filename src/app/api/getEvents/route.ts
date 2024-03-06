@@ -10,23 +10,25 @@ export async function GET(req:Request) {
 
      const headersList = headers()
      const eventType = headersList.get('event-type')
-     const category = headersList.get('category')
-     console.log(category);
+    //  const category = headersList.get('category')
      if (!eventType) {
         return  NextResponse.json({ message: "Bad Request" }, { status: 400 });
       }
       let events;
       if (eventType == '1') {
-        events = await db.collection('events').find({ event_wor: "1",showFlag:true,category:category }).toArray();
+        events = await db.collection('events').find({ event_wor: "1",showFlag:true }).toArray();
       } else if (eventType == '2') {
-        events = await db.collection('events').find({ event_wor: "2" ,showFlag:true,category:category}).toArray();
-      } else {
+        events = await db.collection('events').find({ event_wor: "2" ,showFlag:true}).toArray();
+      } else if(eventType == '3'){
+        events = await db.collection('events').find({ event_wor: "3" ,showFlag:true}).toArray();
+      }
+      else{
         return NextResponse.json({ message: "Invalid Request" }, { status: 400 });
       }
-     console.log(events);
+
       return NextResponse.json({events }, { status: 200 });
     } catch (error) {
-     
+
       return NextResponse.json(
         { message:error },
         { status: 500 }
