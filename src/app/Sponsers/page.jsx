@@ -3,7 +3,7 @@ export const dynamic='force-dynamic'
 export default async function Page() {
    let Event;
     try {
-      const response = await fetch('http://localhost:3000/api/getSponsers', {
+      const response = await fetch('/api/getSponsers', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
