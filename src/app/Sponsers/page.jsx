@@ -3,7 +3,7 @@ export const dynamic='force-dynamic'
 export default async function Page() {
    let Event;
     try {
-      const response = await fetch('/api/getSponsers', {
+      const response = await fetch('https://axis-3.vercel.app/api/getSponsers', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
