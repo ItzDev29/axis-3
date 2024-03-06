@@ -9,7 +9,7 @@ export default async function Page() {
 
    let workshop={};
     try {
-      const response = await fetch('/api/getEvents', {
+      const response = await fetch('https://axis-3.vercel.app/api/getEvents', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ export default async function Page() {
 	let User;
   if(userId){
    try {
-        const res = await fetch("/api/checkprofile", {
+        const res = await fetch("https://axis-3.vercel.app/api/checkprofile", {
           method: "GET",
           headers:{
                 "email":userId?.user.email
