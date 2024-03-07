@@ -13,7 +13,7 @@ export default function Index() {
              <video
         ref={videoRef}
         autoPlay
-        loop
+        
         muted
         playsInline
         style={{ objectFit: 'cover', width: 'full', height: 'full' }}
