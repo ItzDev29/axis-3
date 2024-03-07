@@ -24,7 +24,7 @@ export default function Login() {
   const [error, setError] = useState("");
 
   const searchParams = useSearchParams();
-  const callbackUrl = "http://localhost:3000/profile";
+  const callbackUrl = "https://axis-3.vercel.app/profile";
 
   const onSubmit = async (e) => {
     e.preventDefault();
