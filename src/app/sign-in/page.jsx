@@ -9,7 +9,7 @@ import Login from './SignIn';
 
 const StyledDiv = styled.div`
  z-index:1000;
- position:sticky;
+ position:relative;
 `;
 export default  function Page() {
 
