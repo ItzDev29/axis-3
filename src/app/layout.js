@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { NextAuthProvider } from "./providers";
 const inter = Inter({ subsets: ['latin'] })
 import { toast, ToastContainer } from "react-toastify";
+import StyledComponentsRegistry from './registry'
 import "react-toastify/dist/ReactToastify.css";
 export const metadata = {
   title: "AXIS'24",
@@ -15,8 +16,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
       <ToastContainer/>
+  <StyledComponentsRegistry>
 <NextAuthProvider> {children}
 </NextAuthProvider>
+</StyledComponentsRegistry>
        
       
 
