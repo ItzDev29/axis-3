@@ -36,7 +36,7 @@ const server = await new Promise((resolve, reject) => {
     })
   })
   if (!server) {
-    res.status(500).json({ error: 'Error failed' })
+    return {message:"Server error"}
   }
 
   const success = await new Promise((resolve, reject) => {
