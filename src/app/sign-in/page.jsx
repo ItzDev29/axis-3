@@ -21,7 +21,7 @@ export default function Login() {
     email: "",
     password: "",
   });
-  const [error, setError] = useState("");
+ 
 
   const searchParams = useSearchParams();
   const callbackUrl = "https://axis-3.vercel.app/profile";
@@ -38,9 +38,9 @@ export default function Login() {
       });
 
       if (!res?.error) {
-        setError("Succesfully signed-in");
+        toast.success("Succesfully signed-in");
       } else {
-        setError("Invalid email or password");
+        toast.error("Invalid email or password");
       }
     } catch (error) {
       console.log(error);
@@ -70,12 +70,12 @@ export default function Login() {
       if (res.status != 200 || res.status == 500) {
         const error = await res.json();
         const message = error.message;
-        setError(message);
+         toast.error(message)
       }
 
       const error = await res.json();
       const message = error.message;
-      setError(message);
+      toast.success(message);
       setTimeout(() => {
         signIn(undefined, { callbackUrl: "/" });
       }, 2000);
@@ -97,9 +97,7 @@ export default function Login() {
 
   return (
     <>
-      {error && (
-        <p className="text-center bg-red-300 py-4 mb-6 rounded">{error}</p>
-      )}
+      
       <div className="wrapper mb-24">
         <div className="title-text">
           <div className="title login">Login Form</div>
