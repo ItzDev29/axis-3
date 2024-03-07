@@ -230,7 +230,7 @@ function Form({ eventname, participantcount, category, id, user,email }) {
             <input
               type="text"
               id="teamName"
-              readOnly
+              
               value={teamName}
               onChange={(e) => setTeamName(e.target.value)}
               className="mt-1 px-2 py-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
