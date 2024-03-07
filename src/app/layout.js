@@ -16,10 +16,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
       <ToastContainer/>
-  <StyledComponentsRegistry>
+ 
 <NextAuthProvider> {children}
 </NextAuthProvider>
-</StyledComponentsRegistry>
+
        
       
 
