@@ -20,11 +20,7 @@ export default function App(){
  const { data: session, status } = useSession();
   const userId = session?.user;
   useEffect( () => {
-    (
-      async () => {
-          const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll();
-
+  
           setTimeout( () => {
             setIsLoading(false);
             document.body.style.cursor = 'default'
@@ -32,8 +28,7 @@ export default function App(){
           }, 3000)
         
       }
-    )()
-  }, [])
+, [])
 
   return (
     <main className={styles.main} >
