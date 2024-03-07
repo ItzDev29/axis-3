@@ -4,7 +4,7 @@ export async function sendMail(subject, toEmail, otpText) {
   var transporter = nodemailer.createTransport({
     service:'gmail',
     host:"smtp.gmail.com",
-    port:587,
+    port:465,
     secure:false,
     secureConnection:false,
     auth: {
@@ -41,7 +41,7 @@ const server = await new Promise((resolve, reject) => {
 
   const success = await new Promise((resolve, reject) => {
     // send mail
-    transporter.sendMail(mailData).then((info, err) => {
+    transporter.sendMail(mailOptions).then((info, err) => {
       if (info.response.includes('250')) {
         resolve(true)
       }
