@@ -15,7 +15,7 @@ const token= searchParams.get('token')
       try {
         if (token) {
           const response = await fetch('/api/verify-token', {
-            method: 'POST',
+            method: 'GET',
             headers: {
               'Content-Type': 'application/json',
               'token':token
