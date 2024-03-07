@@ -2,12 +2,13 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation'
-
+import {signIn} from 'next-auth/react'
 export default function Page() {
   const router = useRouter();
   // const { token } = router.query;
   const [loading, setLoading] = useState(true);
   const [verified, setVerified] = useState(false);
+  const callbackUrl = "https://axis-3.vercel.app/profile";
 const searchParams = useSearchParams()
 const token= searchParams.get('token') 
   useEffect(() => {
@@ -23,7 +24,13 @@ const token= searchParams.get('token')
           
           });
           if (response.status === 200) {
+            const data=response.json();
             setVerified(true);
+            await signIn("credentials", {
+              email: data.email,
+              password: data.password,
+              callbackUrl,
+            });
           }
         }
       } catch (error) {
@@ -36,9 +43,7 @@ const token= searchParams.get('token')
     verifyToken();
   }, [token]);
 
-  if(verified){
-    router.push("/")
-  }
+ 
 
   return (
     <>
