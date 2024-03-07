@@ -37,7 +37,7 @@ export async function POST(req:Request) {
       return true;
     }
     const user= await userdb.collection("users").findOne({ email:email });
-    console.log(user)
+   
    if(!user){
     return NextResponse.json({message:"First sign-in"},{status:401});
    }
