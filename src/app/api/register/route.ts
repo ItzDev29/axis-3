@@ -14,7 +14,7 @@ const token = generateVerificationToken();
 const handleSubmit =async  (Email:String) => {
 const email=Email;
 const text=  `<p>Please click the following link to verify your email:</p>
-<p><a href="http://axis-3.vercel.app/verify/${token}">Verify Email</a></p>
+<p><a href="https://axis-3.vercel.app/verify?${token}">Verify Email</a></p>
 `
 const subject=   'Email Verfication-AXIS VNIT';
 
