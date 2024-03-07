@@ -81,7 +81,7 @@ const Events = ({ Events, dbUser }) => {
        toast.error("Please sign-in first!!");
      }
     else if(!isDataComplete(dbUser)){
-      toast.error("Please complete your profile first!")
+      toast.error("Please complete your profile from Dashboard!")
     }
    };
 
