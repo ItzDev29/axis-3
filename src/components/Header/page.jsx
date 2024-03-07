@@ -180,7 +180,7 @@ export default function Header({ show }) {
                         </a>
                       </Magnetic>
                       <button
-                        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent ml-2 rounded-full"
+                        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white px-4 border border-blue-500 hover:border-transparent ml-2 rounded-full"
                         onClick={() =>
                           status !== "loading"
                             ? setTimeout(signOut({ callbackUrl: "/" }), 2000)
@@ -253,7 +253,7 @@ export default function Header({ show }) {
             <ul className="flex flex-col mt-2 space-y-2">
               <li>
                 <a href="/" className="hover:text-blue-500">
-                 Home
+                  Home
                 </a>
               </li>
               <li>
@@ -294,12 +294,10 @@ export default function Header({ show }) {
                         ? setTimeout(signOut({ callbackUrl: "/" }), 2000)
                         : null
                     }
-                    className="w-full px-5 mt-2 border-4 rounded-full py-3 transition-colors duration-300 bg-gray-200 dark:bg-gray-800 md:w-auto md:mx-6 hover:bg-blue-400 dark:hover:bg-gray-700"
+                    className="w-full py-1 mt-2 rounded-full transition-colors duration-300 bg-purple-700 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:bg-blue-900 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 text-white font-medium text-lg"
                   >
-                    <div className="flex gap-10 items-center justify-center -mx-2">
-                      <p className="mx-1 text-lg font-medium text-black dark:text-white">
-                        Sign Out
-                      </p>
+                    <div className="flex items-center justify-center">
+                      <p className="mx-1 text-lg mt-3">Sign Out</p>
                     </div>
                   </button>
                 </>
