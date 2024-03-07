@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation'
 
 export default function Page() {
-  const router = useRouter();
-  const { token } = router.query;
+  // const router = useRouter();
+  // const { token } = router.query;
   const [loading, setLoading] = useState(true);
   const [verified, setVerified] = useState(false);
 const searchParams = useSearchParams()
