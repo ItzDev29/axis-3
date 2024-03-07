@@ -24,7 +24,7 @@ export default function App(){
       async () => {
           const LocomotiveScroll = (await import('locomotive-scroll')).default
           const locomotiveScroll = new LocomotiveScroll();
-if(!session && status != "loading"){
+if(!session || status != "loading"){
           setTimeout( () => {
             setIsLoading(false);
             document.body.style.cursor = 'default'
