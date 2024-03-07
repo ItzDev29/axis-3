@@ -26,15 +26,33 @@ export async function sendMail(subject, toEmail, otpText) {
   
   };
 
-  await new Promise((resolve, reject) => {
-    // send mail
-    transporter.sendMail(mailOptions, (err, response) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(response);
+const server = await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error: any, success: any) {
+      if (success) {
+        resolve(success)
       }
-    });
-  });
+      reject(error)
+    })
+  })
+  if (!server) {
+    res.status(500).json({ error: 'Error failed' })
+  }
+
+  const success = await new Promise((resolve, reject) => {
+    // send mail
+    transporter.sendMail(mailData).then((info: any, err: any) => {
+      if (info.response.includes('250')) {
+        resolve(true)
+      }
+      reject(err)
+    })
+  })
+
+  if (!success) {
+  return {message:"Error 500"}
+  }
+return {message:"Success"}
+}
 }
 
