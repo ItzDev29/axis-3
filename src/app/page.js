@@ -24,16 +24,16 @@ export default function App(){
       async () => {
           const LocomotiveScroll = (await import('locomotive-scroll')).default
           const locomotiveScroll = new LocomotiveScroll();
-if(!session || status != "loading"){
+
           setTimeout( () => {
             setIsLoading(false);
             document.body.style.cursor = 'default'
             window.scrollTo(0,0);
           }, 3000)
-        }
+        
       }
     )()
-  }, [status,session])
+  }, [])
 
   return (
     <main className={styles.main} >
