@@ -1,12 +1,12 @@
+"use client"
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-
+import { useSearchParams } from 'next/navigation'
 export default function Page() {
-  const router = useRouter();
-  const { token } = router.query;
+  const searchParams = useSearchParams()
   const [loading, setLoading] = useState(true);
   const [verified, setVerified] = useState(false);
-
+ const token= searchParams.get('token') 
   useEffect(() => {
     const verifyToken = async () => {
       try {
