@@ -39,7 +39,7 @@ export const authOptions: NextAuthOptions = {
         if (!credentials?.email || !credentials.password) {
           return null;
         }
-        const res = await fetch(process.env.NEXTAUTH_URL+"/api/getSignIn", {
+        const res = await fetch("https://axis-3.vercel.app/api/getSignIn", {
           method: "GET",
           headers: {
             "Content-Type": "application/json", 
