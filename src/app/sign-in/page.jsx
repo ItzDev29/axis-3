@@ -9,7 +9,14 @@ import Login from './SignIn';
 
 const StyledDiv = styled.div`
  z-index:1000;
- position:relative;
+  position:relative;
+  
+   @media (min-width: 1321px) {
+    position: sticky;
+    top: 50%;
+    left: 50%;
+ 
+ };
 `;
 export default  function Page() {
 
