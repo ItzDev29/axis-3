@@ -4,7 +4,8 @@ const nextConfig = {
         domains: [
             "avatars.githubusercontent.com",
             "lh3.googleusercontent.com",
-"img.clerk.com"
+            "res.cloudinary.com"
+
         ],
     },
     webpack: (config, { isServer }) => {
