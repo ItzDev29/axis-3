@@ -10,7 +10,7 @@ html,body{
   height: 100%;
   width: 100%;
   place-items: center;
-  background: url('/images/teambg.png');
+
   background-size: cover; /* Ensures the background image covers the entire element */
   background-repeat: no-repeat; /* Prevents the image from repeating */
 }
