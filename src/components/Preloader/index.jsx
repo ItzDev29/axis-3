@@ -10,7 +10,7 @@ export default function Index() {
     return (
         <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>/
 
-              <video
+             <video
         ref={videoRef}
         autoPlay
         loop
@@ -18,9 +18,9 @@ export default function Index() {
         playsInline
         style={{ objectFit: 'cover', width: 'full', height: 'full' }}
       >
-        <source src="/video/Load.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/dx9oqxlix/video/upload/f_auto:video,q_auto/sxzgyyaw6cgia2e0bp8h#start-offset=0" type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video>     
         </motion.div>
     )
 }
