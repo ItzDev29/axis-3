@@ -28,7 +28,7 @@ export async function sendMail(subject, toEmail, otpText) {
 
 const server = await new Promise((resolve, reject) => {
     // verify connection configuration
-    transporter.verify(function (error: any, success: any) {
+    transporter.verify(function (error, success) {
       if (success) {
         resolve(success)
       }
@@ -41,7 +41,7 @@ const server = await new Promise((resolve, reject) => {
 
   const success = await new Promise((resolve, reject) => {
     // send mail
-    transporter.sendMail(mailData).then((info: any, err: any) => {
+    transporter.sendMail(mailData).then((info, err) => {
       if (info.response.includes('250')) {
         resolve(true)
       }
