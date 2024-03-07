@@ -185,7 +185,7 @@ const Events = ({ Events, dbUser }) => {
       ) : (
         <>
           <div
-            className="bg-cover bg-fixed bg-center w-full"
+            className="bg-cover backgroundContainer bg-fixed bg-center w-full"
             style={{ backgroundImage: "url('/images/teambg.png')" }}
           >
           <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-lg relative">
@@ -216,73 +216,73 @@ const Events = ({ Events, dbUser }) => {
               </div>
             )}
           </div>
-          <div className="text-center text-white font-medium pt-2 ">
-            <h1 className="mt-4 mb-3 text-4xl">Events</h1>
+          <div className="text-center text-white font-medium ">
+            <h1 className="mt-6 mb-3 text-4xl">Events</h1>
             <section className="bg-transparent">
-              <div className="container px-6 py-2 mx-auto relative">
-                <button
-                  className="text-lg text-gray-600 dark:text-gray-400 focus:outline-none absolute left-0 top-1/2 transform -translate-y-1/2"
-                  onClick={scrollLeft}
-                >
-                  <svg
-                    className="w-10 h-10 pl-4 pt-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M15 19l-7-7 7-7"
-                    />
-                  </svg>
-                </button>
-                <button
-                  className="text-lg text-gray-600 dark:text-gray-400 focus:outline-none absolute right-0 top-1/2 transform -translate-y-1/2"
-                  onClick={scrollRight}
-                >
-                  <svg
-                    className="w-10 h-10 pl-4 pt-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
-                <div className="py-4 mt-4 overflow-hidden md:justify-center dark:border-gray-700">
-                  <div className="flex items-center justify-center relative">
-                    <div
-                      className="overflow-hidden"
-                      style={{ scrollbarWidth: "none" }}
-                      ref={sliderRef}
-                    >
-                      <div className="flex space-x-4">
-                        {headings.map((heading, index) => (
-                          <button
-                            className={`relative px-4 py-2 rounded-full text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
-                              selectedHeading === heading
-                                ? "border-b-2   border-blue-500"
-                                : ""
-                            }`}
-                            key={index}
-                            onClick={() => handleHeadingClick(heading)}
-                          >
-                            {heading}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+ <div className="container px-9 py-3 mx-auto relative">
+    <button
+      className="text-xl z-20 dark:text-gray-400 focus:outline-none absolute left-0 top-1/2 transform -translate-y-1/2"
+      onClick={scrollLeft}
+    >
+      <svg
+        className="w-16 h-16 pr-4 pt-3"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="white"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="3"
+          d="M15 19l-7-7 7-7"
+        />
+      </svg>
+    </button>
+    <button
+      className="text-lg z-20 dark:text-gray-400 focus:outline-none absolute right-0 top-1/2 transform -translate-y-1/2"
+      onClick={scrollRight}
+    >
+      <svg
+        className="w-14 h-14 pl-5 pt-2"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="white"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="3"
+          d="M9 5l7 7-7 7"
+        />
+      </svg>
+    </button>
+    <div className="py-4 mt-4 overflow-hidden md:justify-center dark:border-gray-700">
+      <div className="flex items-center justify-center relative">
+        <div
+          className="overflow-x-auto"
+          style={{ scrollbarWidth: "thin" }}
+          ref={sliderRef}
+        >
+          <div className="flex space-x-4">
+            {headings.map((heading, index) => (
+              <button
+                className={`relative border px-4 py-2 rounded-full text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
+                 selectedHeading === heading
+                    ? "border-b-2   border-blue-500"
+                    : ""
+                }`}
+                key={index}
+                onClick={() => handleHeadingClick(heading)}
+              >
+                {heading}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+</section>
             <h2 className="mt-10 mb-6 text-3xl">{selectedHeading}</h2>
 
             <div className="wrapper-container grid mt-24 mb-10 p-2 ml-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20">
@@ -301,7 +301,7 @@ const Events = ({ Events, dbUser }) => {
                         alt="Background Image"
                       />
                     </div>
-                    <p className="container text-white text-center mr-5 font-semibold text-3xl mt-5 mb-2">
+                    <p className="container text-white text-center mr-6 font-semibold text-3xl mt-5 mb-2">
                       {card.evename}
                     </p>
                     <p className="wrapper text-white text-center text-sm mr-10 mt-5 mb-4">
