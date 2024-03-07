@@ -1,7 +1,7 @@
-"use client"
 
 
-import React, { useEffect,useState }  from 'react'
+
+
 import './global1.css';
 import styled from 'styled-components';
 import Login from './SignIn';
