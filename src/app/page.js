@@ -36,10 +36,9 @@ export default function App(){
     }
     else{
       setIsLoading(false);
-        document.body.style.cursor = 'default';
-        window.scrollTo(0, 0);
+  
       if (landingRef.current) {
-        landingRef.current.scrollIntoView({ behavior: 'smooth' });
+        landingRef.current.scrollIntoView({ behavior: 'instant' });
       }
     }
     
