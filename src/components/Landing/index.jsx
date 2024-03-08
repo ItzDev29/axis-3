@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/all";
 import { slideUp } from "./animation";
 import { motion } from "framer-motion";
 import Header from '../Header/page';
-
+import Image from "next/image";
 export default function Home() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -85,7 +85,7 @@ export default function Home() {
                 <br />
                 <br />
                 <br />
-                <img
+                <Image
                   src="/images/axis24ogocenter.png"
                 
                   className="w-full h-full pb-14 pr-10"
