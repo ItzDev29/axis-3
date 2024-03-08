@@ -1,6 +1,6 @@
 'use client';
 import styles from './page.module.scss'
-import { useEffect, useState } from 'react'
+import { useEffect, useState ,useRef} from 'react'
 import { AnimatePresence } from 'framer-motion';
 import Preloader from '../components/Preloader';
 import Landing from '../components/Landing';
@@ -14,28 +14,51 @@ import Line from '../components/Line/page';
 import Speaker from '../components/Speakers/Speaker';
 import Theme from '../components/Themevideo/page';
 import { signOut, useSession } from "next-auth/react";
-
+import { Suspense } from 'react';
 export default function App(){
   const [isLoading, setIsLoading] = useState(true);
  const { data: session, status } = useSession();
   const userId = session?.user;
-  useEffect( () => {
-  
-          setTimeout( () => {
-            setIsLoading(false);
-            document.body.style.cursor = 'default'
-            window.scrollTo(0,0);
-          }, 3000)
-        
-      }
-, [])
+  const [firstTimeVisit, setFirstTimeVisit] = useState(false); 
+  const landingRef = useRef(null);
 
+  useEffect(() => {
+    // Check if the user has visited the site before
+    const visitedBefore = localStorage.getItem('visitedBefore');
+    if (!visitedBefore) {
+      setFirstTimeVisit(true);
+      localStorage.setItem('visitedBefore', 'true');
+      const timeout = setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = 'default';
+        window.scrollTo(0, 0);
+      }, 3000);
+    }
+    else{
+      setIsLoading(false);
+    
+      if (landingRef.current) {
+        landingRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    
+    // Stop loading indicator after 8 seconds
+    
+    return () => clearTimeout(timeout);
+  }, []);
   return (
     <main className={styles.main} >
-      <AnimatePresence mode='wait'>
-        {isLoading && <Preloader />}
-      </AnimatePresence>
-      <Landing />
+   
+   {firstTimeVisit && (
+        <AnimatePresence mode='wait'>
+          {isLoading && <Preloader />}
+        </AnimatePresence>
+      )}
+    {!isLoading && (
+      <>
+        <Landing ref={landingRef} />
+    
+      
       <Count/>
       <Director/>
       <Line/>
@@ -51,6 +74,9 @@ export default function App(){
       <br></br>
       <GoToTopButton/>
       <Contact />
+      </>)}
+   
+  
     </main>
   )
 }
