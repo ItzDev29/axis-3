@@ -56,7 +56,7 @@ export default function App(){
       )}
     {!isLoading && (
       <>
-         <AnimatePresence mode='wait'>
+        
         <Landing  />
         
       
@@ -74,7 +74,7 @@ export default function App(){
       <br></br>
       <br></br>
       <GoToTopButton/>
-      <Contact /></AnimatePresence>
+      <Contact />
       </>)}
       
   
