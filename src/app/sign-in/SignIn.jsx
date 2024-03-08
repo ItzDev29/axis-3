@@ -25,7 +25,7 @@ export default function Login() {
  
 
   const searchParams = useSearchParams();
-  const callbackUrl = "https://axis-3.vercel.app/profile";
+  const callbackUrl = "https://axisvnit.in/profile";
 
   const onSubmit = async (e) => {
     e.preventDefault();
