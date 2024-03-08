@@ -104,7 +104,7 @@ export default function Home() {
               >
                 
                    {!videoLoaded && (
-              <img src="/images/bgvideo.png" alt="Video Thumbnail" />
+              <img src="/images/bgvideo1.png" alt="Video Thumbnail" />
             )}
                 <video
                   autoPlay
