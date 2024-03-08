@@ -87,7 +87,7 @@ export default function Home() {
                 <br />
                 <img
                   src="/images/axis24ogocenter.png"
-                  alt="Image"
+                
                   className="w-full h-full pb-14 pr-10"
                 />
               </div>
