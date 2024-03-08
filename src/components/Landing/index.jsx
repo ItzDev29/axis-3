@@ -67,6 +67,13 @@ export default function Home() {
   useEffect(() => {
     fetchEvents();
   }, []);
+
+
+   const [videoLoaded, setVideoLoaded] = useState(false);
+
+  const handleVideoLoaded = () => {
+    setVideoLoaded(true);
+  };
   return (
     <>
       <Header show={true} />
@@ -133,12 +140,18 @@ export default function Home() {
                 className="relative w-full"
                 style={{ paddingBottom: "180.25%" }}
               >
+
+                   {!videoLoaded && (
+              <img src="/images/bgvideo.png" alt="Video Thumbnail" />
+            )}
                 <video
                   autoPlay
                   loop
                   muted
                   playsInline
                   className="absolute w-full h-auto object-cover z-0"
+                   style={{ display: videoLoaded ? 'block' : 'none' }}
+                  onLoadedData={handleVideoLoaded}
                 >
                   <source src="/video/bgvideo.webm" type="video/mp4" />
                   Your browser does not support the video tag.
