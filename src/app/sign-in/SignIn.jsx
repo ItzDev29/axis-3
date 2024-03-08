@@ -153,7 +153,7 @@ export default function Login() {
                 />
               </div>
               <div className="pass-link">
-                <a href="/_error">Forgot password?</a>
+                <a href="/forgot-password">Forgot password?</a>
               </div>
               <div className="field btn">
                 <div className="btn-layer"></div>
