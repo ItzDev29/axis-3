@@ -102,12 +102,18 @@ export default function Home() {
                 className="relative w-full"
                 style={{ paddingBottom: "56.25%" }}
               >
+                
+                   {!videoLoaded && (
+              <img src="/images/bgvideo.png" alt="Video Thumbnail" />
+            )}
                 <video
                   autoPlay
                   loop
                   muted
                   playsInline
                   className="absolute w-full h-auto object-cover z-0"
+                   style={{ display: videoLoaded ? 'block' : 'none' }}
+                  onLoadedData={handleVideoLoaded}
                 >
                   <source src="/video/bgvideo1.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
