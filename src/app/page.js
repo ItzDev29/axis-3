@@ -28,7 +28,7 @@ export default function App(){
     if (!visitedBefore) {
       setFirstTimeVisit(true);
       localStorage.setItem('visitedBefore', 'true');
-      timeout = setTimeout(() => {
+     const timeout = setTimeout(() => {
         setIsLoading(false);
         document.body.style.cursor = 'default';
         window.scrollTo(0, 0);
@@ -44,7 +44,7 @@ export default function App(){
     
     // Stop loading indicator after 8 seconds
     
-    return () => clearTimeout(timeout);
+   
   }, []);
   return (
     <main className={styles.main} >
