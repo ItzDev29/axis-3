@@ -86,7 +86,7 @@ export default function Home() {
                 <br />
                 <br />
                 <Image
-                  src="/images/axis24ogocenter.png"
+                  src="https://i.ibb.co/h7MHkPx/axis24ogocenter.png"
                 
                   className="w-full h-full pb-14 pr-10"
                 />
