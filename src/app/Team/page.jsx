@@ -527,7 +527,7 @@ export default function Team() {
               </h1>
 
               <p class="mt-2 text-gray-300 font-semibold capitalize  group-hover:text-gray-300">
-               CLOUD DEPLOYMENT 
+               CLOUD DEVELOPER
               </p>
 
               <div class="flex gap-4 mt-3 text-center">
