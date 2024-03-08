@@ -73,12 +73,12 @@ export default function Home() {
 
       <div>
         <div className={isSmallScreen ? "hidden sm:block" : "block"}>
-          <motion.main
+{/*           <motion.main
             variants={slideUp}
             initial="initial"
             animate="enter"
             className="flex "
-          >
+          > */}
             <div className="relative items-center w-full h-full">
               <div className="absolute left-0 pl-14 text-white z-10 w-2/3 top-9">
                 <br />
@@ -107,7 +107,7 @@ export default function Home() {
                 </video>
               </div>
             </div>
-          </motion.main>
+{/*           </motion.main> */}
         </div>
 
         <div className={isSmallScreen ? "block" : "hidden sm:hidden"}>
