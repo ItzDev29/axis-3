@@ -32,13 +32,14 @@ export default function App(){
         setIsLoading(false);
         document.body.style.cursor = 'default';
         window.scrollTo(0, 0);
-      }, 3000);
+      }, 4000);
     }
     else{
       setIsLoading(false);
-    
+        document.body.style.cursor = 'default';
+        window.scrollTo(0, 0);
       if (landingRef.current) {
-        landingRef.current.scrollIntoView({ behavior: 'smooth' });
+        landingRef.current.scrollIntoView({ behavior: 'auto' });
       }
     }
     
