@@ -28,7 +28,7 @@ export default function App(){
     if (!visitedBefore) {
       setFirstTimeVisit(true);
       localStorage.setItem('visitedBefore', 'true');
-      const timeout = setTimeout(() => {
+      timeout = setTimeout(() => {
         setIsLoading(false);
         document.body.style.cursor = 'default';
         window.scrollTo(0, 0);
