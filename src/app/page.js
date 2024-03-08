@@ -56,8 +56,9 @@ export default function App(){
       )}
     {!isLoading && (
       <>
-        <Landing ref={landingRef} />
-    
+         <AnimatePresence mode='wait'>
+        <Landing  />
+        </AnimatePresence>
       
       <Count/>
       <Director/>
