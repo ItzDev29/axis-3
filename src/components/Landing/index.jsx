@@ -140,7 +140,7 @@ export default function Home() {
                   playsInline
                   className="absolute w-full h-auto object-cover z-0"
                 >
-                  <source src="/video/bgvideo.mp4" type="video/mp4" />
+                  <source src="https://res.cloudinary.com/dx9oqxlix/video/upload/v1709904744/scffzqnn2fyggjppncxz.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
