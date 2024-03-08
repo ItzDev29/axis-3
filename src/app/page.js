@@ -58,7 +58,7 @@ export default function App(){
       <>
          <AnimatePresence mode='wait'>
         <Landing  />
-        </AnimatePresence>
+        
       
       <Count/>
       <Director/>
@@ -74,9 +74,9 @@ export default function App(){
       <br></br>
       <br></br>
       <GoToTopButton/>
-      <Contact />
+      <Contact /></AnimatePresence>
       </>)}
-   
+      
   
     </main>
   )
