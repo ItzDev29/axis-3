@@ -14,11 +14,8 @@ export default function Sponsers({data}) {
           <div className="py-10">
           <div className="max-w-screen-xl mx-auto px-4 md:px-8">
             <h1 className="mt-4 mb-10 text-white text-center text-4xl">
-              Sponsors
+              Our Sponsors
             </h1>
-            <h3 className="font-semibold text-sm text-gray-600 text-center">
-              TRUSTED BY TEAMS FROM AROUND THE WORLD
-            </h3>
             {/* Map over headings array to render headings dynamically */}
             {headings.map((heading, index) => (
               <div key={index}>
