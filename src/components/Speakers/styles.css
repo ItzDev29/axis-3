@@ -36,7 +36,7 @@ body {
 @media (max-width: 768px) {
     .swiper-slide {
       width: 50%;
-      height: 250px; /* Adjusted height for small screens */
+      height: auto; /* Adjusted height for small screens */
     }
   
     .swiper-slide img {
