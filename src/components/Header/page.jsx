@@ -102,7 +102,7 @@ export default function Header({ show }) {
                       href="/Sponsers"
                     >
                       {" "}
-                      Sponsers{" "}
+                      Sponsors{" "}
                     </a>
                   </li>
                 </Magnetic>
