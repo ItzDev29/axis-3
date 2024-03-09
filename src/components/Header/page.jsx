@@ -72,6 +72,17 @@ export default function Header({ show }) {
           <div className="hidden md:block">
             <nav aria-label="Global">
               <ul className="flex  font-bold items-center gap-10 text-base">
+                   <Magnetic>
+                  <li>
+                    <a
+                      className="text-gray-800/75 transition hover:text-black"
+                      href="/"
+                    >
+                      {" "}
+                      Home{" "}
+                    </a>
+                  </li>
+                </Magnetic>
                 <Magnetic>
                   <li>
                     <a
