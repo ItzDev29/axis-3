@@ -36,8 +36,8 @@ export default function Contact() {
                     </motion.svg> */}
           </div>
           <div className={styles.nav}>
-            <Rounded>
-              <p>admin@axisvnit.in</p>
+              <Rounded>
+            <a href="mailto:admin@axisvnit.in"><p>admin@axisvnit.in</p></a>
             </Rounded>
             <Rounded>
               <p>
