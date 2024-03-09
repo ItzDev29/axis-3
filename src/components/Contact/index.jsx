@@ -5,6 +5,10 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import Magnetic from "../../common/Magnetic";
 
 export default function Contact() {
+    const handleClick = () => {
+    window.location.href = "tel:7276104612";
+  };
+  
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -22,7 +26,7 @@ export default function Contact() {
             <span>
               <h2>Lets work together</h2>
             </span>
-            <motion.div style={{ x }} className={styles.buttonContainer}>
+            <motion.div style={{ x }} className={styles.buttonContainer} onClick={handleClick}  >
               <Rounded backgroundColor={'#334BD3'} className={styles.button}>
                 <p>Get in touch</p>
               </Rounded>
