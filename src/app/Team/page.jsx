@@ -1678,7 +1678,7 @@ export default function Team() {
 
                 <ul>
                   <a
-                    href="/"
+                    href="https://www.instagram.com/_itsmosin?igsh=MjY0c2d1aWpmOTJ4"
                     rel="noreferrer"
                     target="_blank"
                     class="text-teal-700 transition hover:text-teal-700/75"
@@ -1745,7 +1745,7 @@ export default function Team() {
 
                 <ul>
                   <a
-                    href="https://www.linkedin.com/company/axis-vnit-nagpur/"
+                    href="https://www.linkedin.com/in/itsmosin?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                     className=" text-teal-700 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                     aria-label="LinkedIN"
                   >
@@ -2726,10 +2726,10 @@ export default function Team() {
                 </ul>
               </div>
             </div>
-            {/* <div class="flex flex-col items-center p-8 transform hover:scale-105 transition-transform duration-300 ease-in-out border cursor-pointer rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent">
+           <div class="flex flex-col items-center p-8 transform hover:scale-105 transition-transform duration-300 ease-in-out border cursor-pointer rounded-xl hover:border-transparent group dark:border-gray-700 dark:hover:border-transparent">
               <img
                 class="object-cover w-40 h-40 rounded-full ring-4 ring-gray-300"
-                src=""
+                src="/images/vish.jpeg"
                 alt=""
               />
 
@@ -2883,7 +2883,7 @@ export default function Team() {
                   </a>
                 </ul>
               </div>
-            </div> */}
+            </div>
           </div>
         )}
       </div>
