@@ -31,7 +31,7 @@ export default function Login() {
     e.preventDefault();
     try {
       setLoading(true);
-       if ( !formvalues.email || !formValues.password) {
+       if ( !formValues.email || !formValues.password) {
     toast.error("Please provide all details");
     setLoading(false);
     return;
