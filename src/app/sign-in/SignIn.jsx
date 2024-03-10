@@ -31,6 +31,11 @@ export default function Login() {
     e.preventDefault();
     try {
       setLoading(true);
+       if ( !formvalues.email || !formValues.password) {
+    toast.error("Please provide all details");
+    setLoading(false);
+    return;
+  }
 
       const res = await signIn("credentials", {
         email: formValues.email,
@@ -60,6 +65,12 @@ export default function Login() {
     setLoading(true);
 
     try {
+
+    if (!formvalues.name || !formvalues.email || !formvalues.password) {
+    toast.error("Please provide all details");
+    setLoading(false);
+    return;
+  }
       const res = await fetch("/api/register", {
         method: "POST",
         body: JSON.stringify(formvalues),
