@@ -225,7 +225,7 @@ const Events = ({ Events, dbUser }) => {
       onClick={scrollLeft}
     >
       <svg
-        className="w-16 h-16 pr-4 pt-3"
+        className="w-14 h-16 pr-4 pt-3"
         fill="none"
         viewBox="0 0 24 24"
         stroke="white"
