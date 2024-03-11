@@ -332,43 +332,41 @@ const Events = ({ Events, dbUser }) => {
             </div>
           </div>
           
-          <footer className="bg-white bg-opacity-50">
-            <div className="container flex flex-col items-center justify-between px-6 py-2 mx-auto lg:flex-row">
-              <a href="/">
-                <img
-                  className="w-28 h-18 md:w-32 md:h-22"
-                  src="/images/axislogo.png"
-                  alt=""
-                />
-              </a>
-              <div className="flex flex-wrap items-center justify-center gap-3 mt-4 lg:gap-6 lg:mt-0">
-                <a
-                  href="/Events"
-                  className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
-                >
-                  Events
-                </a>
-                <a
-                  href="/Workshop"
-                  className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
-                >
-                  Workshops
-                </a>
-                <a
-                  href="/Team"
-                  className="text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
-                >
-                  Our Teams!
-                </a>
-              </div>
-              <p className="mt-6 text-sm text-gray-500 lg:mt-0 dark:text-gray-400">
-                © Copyright 2024. All Rights Reserved.
-              </p>
-            </div>
-           
-            <GoToTopButton />
-            
-          </footer>
+        <footer class="bg-gray-600 bg-opacity-50">
+                  <div class="container flex flex-col items-center justify-between px-6 py-2 mx-auto lg:flex-row">
+                      <a href="/">
+                          <img className="w-28 h-18 md:w-32 md:h-22" src="/images/axislogo.png" alt="" />
+                      </a>
+
+                      <div class="flex flex-wrap items-center justify-center gap-3 mt-2 lg:gap-6 lg:mt-0">
+                          <a
+                              href="/Events"
+                              class="text-sm text-white transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
+                          >
+                              Events
+                          </a>
+
+                          <a
+                              href="/Workshop"
+                              class="text-sm text-white transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
+                          >
+                              Workshops
+                          </a>
+
+                          <a
+                              href="/Team"
+                              class="text-sm text-white transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400"
+                          >
+                              Our Team!
+                          </a>
+                      </div>
+
+                      <p class="mt-6 text-sm text-white lg:mt-0 dark:text-gray-400">
+                          © Copyright 2024. All Rights Reserved.
+                      </p>
+                  </div>
+              </footer>
+          <GoToTopButton />
           </div>
         </>
       )}
