@@ -84,7 +84,7 @@ const handleSubmit = async (e) => {
     });
     if (response.ok) {
       toast.success('Form submitted successfully');
-
+           window.location.reload();
       // Optionally, perform any actions after successful submission
     } else {
       toast.error('Failed to submit form');
