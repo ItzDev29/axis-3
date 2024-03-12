@@ -5,10 +5,32 @@ import React, { useState, useEffect} from "react";
 import GoToTopButton from "../../components/GoToTop/Go";
 import Header from "../../components/Header/page";
 
-export default function Sponsers({data}) {
+export default function Sponsers() {
   
   const [loading, setLoading] = useState(true);
-
+ const[data,setData]=useState({});
+  useEffect(()=>{
+    try{
+        const response = await fetch('/api/getSponsers', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+       
+        },
+     
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch events');
+      }
+      
+      const events = await response.json();
+       Event= events && events.events;
+       setData(Event[0]);
+    } catch (error) {
+      console.log('Error fetching events:', error);
+    }
+  });
     useEffect(() => {
     if (data) {
       setLoading(false);
