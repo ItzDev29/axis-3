@@ -3,10 +3,22 @@ import GoToTopButton from "../../components/GoToTop/Go";
 import Header from "../../components/Header/page";
 
 export default function Sponsers({data}) {
+  
+  const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+    if (data) {
+      setLoading(false);
+    } else {
+      setLoading(false);
+      toast.error("Reload required");
+    }
+  }, [data]);
   const headings = Object.keys(data).filter(key => key !== '_id');
   return (
     <>
       <Header show={true} />
+      
       <div
         className="bg-cover bg-fixed bg-center w-full"
         style={{ backgroundImage: "url('/images/teambg.png')" }}
