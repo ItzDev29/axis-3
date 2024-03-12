@@ -9,7 +9,7 @@ export default function Sponsers() {
   
   const [loading, setLoading] = useState(true);
  const[data,setData]=useState({});
-  useEffect(()=>{
+  useEffect(async ()=>{
     try{
         const response = await fetch('/api/getSponsers', {
         method: 'GET',
