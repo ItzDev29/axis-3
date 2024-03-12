@@ -2,7 +2,6 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import React from "react";
 import GoToTopButton from "../../components/GoToTop/Go";
 import Header from "../../components/Header/page";
 
