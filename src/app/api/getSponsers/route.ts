@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { MongoClient } from 'mongodb'
-
+export const revalidate = 0;
 export async function GET(req:Request) {
     try {
         const client=new MongoClient(process.env.MONGODB_URI ?? ' ' 
