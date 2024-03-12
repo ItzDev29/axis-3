@@ -1,5 +1,4 @@
 import Sponsers from "./Sponsers"
-export const dynamic='force-dynamic'
 export default async function Page() {
    let Event;
     try {
