@@ -1,4 +1,5 @@
 import Sponsers from "./Sponsers"
+export const revalidate = 0;
 export default async function Page() {
    let Event;
     try {
