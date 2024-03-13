@@ -22,7 +22,7 @@ const navItems = [
     href: "https://ca.axisvnit.in/",
   },
   {
-    title: "Sponsers",
+    title: "Sponsors",
     href: "/Sponsers",
   },
   {
