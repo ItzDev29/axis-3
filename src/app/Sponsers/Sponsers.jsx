@@ -42,7 +42,7 @@ export default function Sponsers({data}) {
                       <li key={sponsorIndex} className="flex-none text-center">
                         <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
                           <div>
-                            <img src={sponsor.src} className="w-56 h-56" alt={sponsor.alt} />
+                            <img src={sponsor.src} className="w-64 h-64" alt={sponsor.alt} />
                           
                           </div>
                         </a>
