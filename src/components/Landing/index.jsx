@@ -137,7 +137,7 @@ export default function Home() {
                 <br />
                 <br />
                 <img
-                  src="/images/Logosmall.png"
+                  src="/images/Logosmall(1).png"
                   alt="Image"
                   className="w-screen h-auto md:w-full md:h-full mb-10"
                 />
