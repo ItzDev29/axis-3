@@ -1,8 +1,6 @@
 import { useRef, useLayoutEffect, useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { slideUp } from "./animation";
-import { motion } from "framer-motion";
 import Header from '../Header/page';
 
 export default function Home() {
@@ -38,47 +36,18 @@ export default function Home() {
     });
   }, []);
 
-  const [img, setimg] = useState("");
-  const fetchEvents = async () => {
-    try {
-      const response = await fetch('/api/getEvents', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'event-type': 3,
-         
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch events');
-      }
-
-      const data = await response.json();
-      const Img=data.events[0].mob
-      setimg(Img);
-    
-      // setLoading(false); // Set loading to false after events are fetched
-    } catch (error) {
-      console.log('Error fetching events:', error);
-    }
-  }
-
-  useEffect(() => {
-    fetchEvents();
-  }, []);
   return (
     <>
       <Header show={true} />
 
       <div>
         <div className={isSmallScreen ? "hidden sm:block" : "block"}>
-          <motion.main
+          {/* <motion.main
             variants={slideUp}
             initial="initial"
             animate="enter"
             className="flex "
-          >
+          > */}
             <div className="relative items-center w-full h-full">
               <div className="absolute left-0 pl-14 text-white z-10 w-2/3 top-4">
                 <br />
@@ -107,16 +76,16 @@ export default function Home() {
                 </video>
               </div>
             </div>
-          </motion.main>
+          {/* </motion.main> */}
         </div>
 
         <div className={isSmallScreen ? "block" : "hidden sm:hidden"}>
-          <motion.main
+          {/* <motion.main
             variants={slideUp}
             initial="initial"
             animate="enter"
-            className="flex "
-          >
+            className="flex"
+          > */}
             <div className="relative items-center w-full h-full">
               <div className="absolute left-0 text-white z-10 top-2 w-full">
                 <br />
@@ -145,7 +114,7 @@ export default function Home() {
                 </video>
               </div>
             </div>
-          </motion.main>
+          {/* </motion.main> */}
         </div>
       </div>
     </>
