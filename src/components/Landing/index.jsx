@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/all";
 import { slideUp } from "./animation";
 import { motion } from "framer-motion";
 import Header from '../Header/page';
-import Image from "next/image";
+
 export default function Home() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -67,77 +67,64 @@ export default function Home() {
   useEffect(() => {
     fetchEvents();
   }, []);
-
-
-   const [videoLoaded, setVideoLoaded] = useState(false);
-
-  const handleVideoLoaded = () => {
-    setVideoLoaded(true);
-  };
   return (
     <>
       <Header show={true} />
 
       <div>
         <div className={isSmallScreen ? "hidden sm:block" : "block"}>
-{/*           <motion.main
+          <motion.main
             variants={slideUp}
             initial="initial"
             animate="enter"
             className="flex "
-          > */}
+          >
             <div className="relative items-center w-full h-full">
-              <div className="absolute left-0 pl-14 text-white z-10 w-2/3 top-9">
+              <div className="absolute left-0 pl-14 text-white z-10 w-2/3 top-4">
                 <br />
                 <br />
                 <br />
                 <br />
-                <Image
-                    src="/images/axisogocenter.png"
-                
-                  className="w-full h-full pb-14 pr-10"
+                <img
+                  src="/images/axis24ogocenter(1).png"
+                  alt="Image"
+                  className="w-full h-full pb-14 pr-16"
                 />
               </div>
               <div
                 className="relative w-full"
                 style={{ paddingBottom: "56.25%" }}
               >
-                
-                   {!videoLoaded && (
-              <img src="/images/bgvideo1.png" alt="Video Thumbnail" />
-            )}
                 <video
                   autoPlay
                   loop
                   muted
                   playsInline
                   className="absolute w-full h-auto object-cover z-0"
-                   style={{ display: videoLoaded ? 'block' : 'none' }}
-                  onLoadedData={handleVideoLoaded}
                 >
                   <source src="/video/bgvideo1.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
             </div>
-{/*           </motion.main> */}
+          </motion.main>
         </div>
 
         <div className={isSmallScreen ? "block" : "hidden sm:hidden"}>
-{/*           <motion.main
+          <motion.main
             variants={slideUp}
             initial="initial"
             animate="enter"
             className="flex "
-          > */}
+          >
             <div className="relative items-center w-full h-full">
-              <div className="absolute left-0 text-white z-10 -top-8 w-full">
+              <div className="absolute left-0 text-white z-10 top-2 w-full">
                 <br />
                 <br />
                 <br />
                 <br />
                 <img
-                  src="/images/Logosmall(1).png"
+                  src="/images/Logosmall(2).png"
                   alt="Image"
                   className="w-screen h-auto md:w-full md:h-full mb-10"
                 />
@@ -146,25 +133,19 @@ export default function Home() {
                 className="relative w-full"
                 style={{ paddingBottom: "180.25%" }}
               >
-
-                   {!videoLoaded && (
-              <img src="/images/bgvideo.png" alt="Video Thumbnail" />
-            )}
                 <video
                   autoPlay
                   loop
                   muted
                   playsInline
                   className="absolute w-full h-auto object-cover z-0"
-                   style={{ display: videoLoaded ? 'block' : 'none' }}
-                  onLoadedData={handleVideoLoaded}
                 >
-                  <source src="/video/bgvideo.webm" type="video/mp4" />
+                  <source src="/video/bgvideo.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
             </div>
-{/*           </motion.main> */}
+          </motion.main>
         </div>
       </div>
     </>
