@@ -5,7 +5,7 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import Magnetic from "../../common/Magnetic";
 
 export default function Contact() {
-    const handleClick = () => {
+  const handleClick = () => {
     window.location.href = "tel:8329671303";
   };
   
@@ -26,7 +26,7 @@ export default function Contact() {
             <span>
               <h2>Lets work together</h2>
             </span>
-            <motion.div style={{ x }} className={styles.buttonContainer} onClick={handleClick}  >
+            <motion.div style={{ x }} className={styles.buttonContainer} onClick={handleClick} >
               <Rounded backgroundColor={'#334BD3'} className={styles.button}>
                 <p>Get in touch</p>
               </Rounded>
@@ -36,15 +36,20 @@ export default function Contact() {
                     </motion.svg> */}
           </div>
           <div className={styles.nav}>
-              <Rounded>
+            <Rounded>
             <a href="mailto:admin@axisvnit.in"><p>admin@axisvnit.in</p></a>
             </Rounded>
             <Rounded>
-              <p>
-                {' '}
-                Student Activity Centre, Near Auditorium, VNIT, Nagpur-440010
-              </p>
-            </Rounded>
+  <a
+    href="https://maps.app.goo.gl/52AL5LAzGBMymm3j6"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <p>
+      Student Activity Centre, Near Auditorium, VNIT, Nagpur-440010
+    </p>
+  </a>
+</Rounded>
           </div>
           <div className={styles.info}>
             <div>
@@ -73,7 +78,7 @@ export default function Contact() {
               <Magnetic>
                 <p></p>
               </Magnetic>
-              <a href=''>
+              <a href='https://x.com/axisvnit?t=grPC8q7slHdcM0E2vQ6hug&s=09'>
                 <Magnetic>
                   <p>X</p>
                 </Magnetic>
@@ -81,7 +86,7 @@ export default function Contact() {
               <Magnetic>
                 <p></p>
               </Magnetic>
-              <a href=''>
+              <a href='https://www.facebook.com/axisvnit?sfnsn=wiwspwa&mibextid=2JQ9oc'>
                 <Magnetic>
                   <p>Facebook</p>
                 </Magnetic>
