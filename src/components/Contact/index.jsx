@@ -6,7 +6,7 @@ import Magnetic from "../../common/Magnetic";
 
 export default function Contact() {
     const handleClick = () => {
-    window.location.href = "tel:7276104612";
+    window.location.href = "tel:8329671303";
   };
   
   const container = useRef(null);
