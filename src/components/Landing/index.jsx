@@ -55,7 +55,7 @@ export default function Home() {
                 <br />
                 <br />
                 <img
-                  src="/images/axis24ogocenter(1).png"
+                  src="/images/Logosmall(2).png"
                   alt="Image"
                   className="w-full h-full pb-14 pr-16"
                 />
@@ -94,7 +94,7 @@ export default function Home() {
                 <br />
                 <br />
                 <img
-                  src="/images/Logosmall(2).png"
+                  src="/images/axis24ogocenter(1).png"
                   alt="Image"
                   className="w-screen h-auto md:w-full md:h-full mb-10"
                 />
