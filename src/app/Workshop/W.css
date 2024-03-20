@@ -48,9 +48,9 @@ body {
     margin-right: 10px; /* Adjust the margin between buttons */
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1320px) {
     .button-wrapper {
-       margin-left: 80px;
+       margin-left: 67px;
     }
    }
 
@@ -160,3 +160,36 @@ body {
     -webkit-transition: left 0.30000000000000004s ease;
     -moz-transition: left 0.30000000000000004s ease;
 }
+@media (min-width: 1320px) {
+    .backgroundContainer {
+       background-size: cover;
+       background-repeat: no-repeat;
+       background: fixed;
+       width: 100%;
+    }
+   }
+  
+  @media (min-width: 1320px) {
+    .wrapper-container {
+       margin-left: 80px;
+       gap: 60px;
+    }
+    }
+  
+    
+  @media (min-width: 1320px) {
+  .container {
+     padding-right: 6rem;
+  }
+  }
+  
+  @media (min-width: 1320px) {
+  .wrapper {
+     padding-right: 2rem;
+  }
+  }
+  @media (min-width: 1320px) {
+  .date-conatiner {
+     padding-right: 42px;
+  }
+  }
