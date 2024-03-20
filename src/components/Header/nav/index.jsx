@@ -30,8 +30,12 @@ const navItems = [
     href: "/Workshop",
   },
   {
-    title: "Our Team",
+    title: "Our Team!",
     href: "/Team",
+  },
+  {
+    title: "Accomodation",
+    href: "/Acco",
   },
 ];
 
