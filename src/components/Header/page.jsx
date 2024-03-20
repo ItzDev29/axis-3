@@ -5,10 +5,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence } from "framer-motion";
 import Nav from "./nav";
 import gsap from "gsap";
-
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { redirect } from "next/navigation";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Rounded from "../../common/RoundedButton";
 import Magnetic from "../../common/Magnetic";
@@ -17,7 +14,7 @@ import { signOut, useSession } from "next-auth/react";
 export default function Header({ show }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const { status } = useSession();
-
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const router = useRouter();
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
@@ -72,7 +69,7 @@ export default function Header({ show }) {
           <div className="hidden md:block">
             <nav aria-label="Global">
               <ul className="flex  font-bold items-center gap-10 text-base">
-                   <Magnetic>
+                <Magnetic>
                   <li>
                     <a
                       className="text-gray-800/75 transition hover:text-black"
@@ -118,8 +115,7 @@ export default function Header({ show }) {
                   </li>
                 </Magnetic>
 
-              
-                 <li>
+                <li>
                   <div className="relative z-50">
                     <button
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -168,7 +164,7 @@ export default function Header({ show }) {
                     )}
                   </div>
                 </li>
-              
+
                 <Magnetic>
                   <li>
                     <a
@@ -176,7 +172,7 @@ export default function Header({ show }) {
                       href="/Team"
                     >
                       {" "}
-                      Our Team{" "}
+                      Our Team!{" "}
                     </a>
                   </li>
                 </Magnetic>
@@ -325,7 +321,7 @@ export default function Header({ show }) {
                   Sponsors
                 </a>
               </li>
-          <li>
+              <li>
                   <div className="relative z-50">
                     <button
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
