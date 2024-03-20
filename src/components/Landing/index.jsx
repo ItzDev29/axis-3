@@ -68,6 +68,7 @@ export default function Home() {
                   autoPlay
                   loop
                   muted
+                  preload="auto"
                   playsInline
                   className="absolute w-full h-auto object-cover z-0"
                 >
@@ -106,6 +107,7 @@ export default function Home() {
                   autoPlay
                   loop
                   muted
+                  preload="auto"
                   playsInline
                   className="absolute w-full h-auto object-cover z-0"
                 >
