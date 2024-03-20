@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import Rounded from "../../common/RoundedButton";
 const Merch = () => {
