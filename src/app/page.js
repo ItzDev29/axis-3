@@ -13,6 +13,8 @@ import Count from '../components/Count/page';
 import Line from '../components/Line/page';
 import Speaker from '../components/Speakers/Speaker';
 import Theme from '../components/Themevideo/page';
+import Merch from "./Merch/page"
+
 import { signOut, useSession } from "next-auth/react";
 import { Suspense } from 'react';
 export default function App(){
@@ -64,6 +66,7 @@ export default function App(){
       <Director/>
       <Line/>
       <Theme/>
+      <Merch/>
       <Projects />
       <Speaker/>
       <SlidingImages />
