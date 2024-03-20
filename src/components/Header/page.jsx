@@ -118,17 +118,57 @@ export default function Header({ show }) {
                   </li>
                 </Magnetic>
 
-                <Magnetic>
-                  <li>
-                    <a
-                      className="text-gray-800/75 transition hover:text-black"
-                      href="/Workshop"
+              
+                 <li>
+                  <div className="relative z-50">
+                    <button
+                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                      className="text-gray-800/75 z-50 transition hover:text-black flex items-center"
                     >
-                      {" "}
-                      Workshops{" "}
-                    </a>
-                  </li>
-                </Magnetic>
+                      Workshop
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 ml-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                    {isDropdownOpen && (
+                      <div className="absolute z-50 ml-4 mt-5 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                        <div
+                          className="py-1 z-50"
+                          role="menu"
+                          aria-orientation="vertical"
+                          aria-labelledby="options-menu"
+                        >
+                          <a
+                            href="/Workshop"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem"
+                          >
+                            Workshops
+                          </a>
+                          <a
+                            href="/Acco"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem"
+                          >
+                            Accomodation
+                          </a>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </li>
+              
                 <Magnetic>
                   <li>
                     <a
@@ -285,11 +325,55 @@ export default function Header({ show }) {
                   Sponsors
                 </a>
               </li>
-              <li>
-                <a href="/Workshop" className="hover:text-blue-500">
-                  Workshops
-                </a>
-              </li>
+          <li>
+                  <div className="relative z-50">
+                    <button
+                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                      className="text-gray-800/75 z-50 transition hover:text-black flex items-center"
+                    >
+                      Workshop
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 ml-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                    {isDropdownOpen && (
+                      <div className="absolute z-50 ml-28 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                        <div
+                          className="py-1 z-50"
+                          role="menu"
+                          aria-orientation="vertical"
+                          aria-labelledby="options-menu"
+                        >
+                          <a
+                            href="/Workshop"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem"
+                          >
+                            Workshops
+                          </a>
+                          <a
+                            href="/Acco"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem"
+                          >
+                            Accomodation
+                          </a>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </li>
               <li>
                 <a href="/Team" className="hover:text-blue-500">
                   Our Team!
