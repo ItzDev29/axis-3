@@ -171,7 +171,7 @@ const Events = ({ Events, dbUser }) => {
     "Software & Electronics": SE,
     "Construction & Design": CD,
     "School Events": School,
-    "E-Sports & Gaming": Gaming,
+    "Gaming & Fun": Gaming,
     "Robotics & Automation": AR,
   };
   return (
