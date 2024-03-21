@@ -548,7 +548,7 @@ export default function Team() {
                 <div class="flex gap-4 mt-3 text-center">
                   <ul>
                     <a
-                      href="mailto:"
+                      href="mailto:vedanglokhande2003@gmail.com"
                       rel="noreferrer"
                       target="_blank"
                       class="text-teal-700 transition hover:text-teal-700/75"
