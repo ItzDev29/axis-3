@@ -49,7 +49,7 @@ export default function Home() {
             className="flex "
           > */}
             <div className="relative items-center w-full h-full">
-              <div className="absolute left-0 pl-14 text-white z-10 w-2/3 top-4">
+              <div className="absolute left-0 pl-14 text-white z-10 w-2/3 top-16">
                 <br />
                 <br />
                 <br />
