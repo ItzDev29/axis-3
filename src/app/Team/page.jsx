@@ -548,7 +548,7 @@ export default function Team() {
                 <div class="flex gap-4 mt-3 text-center">
                   <ul>
                     <a
-                      href="mailto:pranav.deshpande@axisvnit.in "
+                      href="mailto:"
                       rel="noreferrer"
                       target="_blank"
                       class="text-teal-700 transition hover:text-teal-700/75"
@@ -587,7 +587,7 @@ export default function Team() {
 
                   <ul>
                     <a
-                      href="https://www.instagram.com/pranav.624/"
+                      href="https://www.instagram.com/vedanglokhande?igsh=ajVqYm9iYTlzemli"
                       rel="noreferrer"
                       target="_blank"
                       class="text-teal-700 transition hover:text-teal-700/75"
@@ -659,7 +659,7 @@ export default function Team() {
 
                   <ul>
                     <a
-                      href="http://www.linkedin.com/in/pranav-deshpande-486903235"
+                      href="https://www.linkedin.com/in/vedang-lokhande-1a1a86233?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                       className=" text-teal-700 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
                       aria-label="LinkedIN"
                     >
